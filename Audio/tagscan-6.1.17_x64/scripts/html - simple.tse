@@ -1,0 +1,83 @@
+﻿# Tagscanner export script
+
+$file_name TrackList.htm
+$file_notes Simple html table
+$file_encoding utf-8
+$file_writebom 1
+$file_ishtml 1
+
+$document_open
+<html>
+<head>
+<meta name="generator" content="TagScanner 5.1">
+<meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+<title>TagScanner Extended PlayList</title>
+<style type="text/css">
+    body { background: #e8f1f7; font-family : verdana, arial, helvetica; color: #000 }
+    a { color: #3333ff; text-decoration: none }
+    a:hover { color: #ff4500; text-decoration: underline }
+    td { font-size: 8pt; padding: 2px }
+    hr { color: black }
+    .theader { background : #6699ff ; color: #fff ; font-weight: bold }
+    .tmaintable { background : none }
+    .teven { background : #fbfcfd; color : #000 }
+    .todd { background : #ffffff; color : #000 }
+    .digits { color: #0032de ; font-weight: bold }
+    .al { color: #3333ff }
+    .al:hover { color: #3333ff;text-decoration: underline }
+</style>
+</head>
+<body topmargin="0" leftmargin="0">
+<hr width="100%" noshade size="1">
+<table border="0" cellspacing="0" cellpadding="2" width="99%" align="center">
+<tr><td>
+Total tracks number: <span class="digits">%_totalfiles%</span><br>
+Total tracks length: <span class="digits">%_totallength%</span><br>
+Total tracks size: <span class="digits">%_totalsize%</span>
+</td></tr></table>
+<hr width="100%" noshade size="1">
+<table class="tmaintable" border="0" cellpadding="3" width="99%" align="center" cellspacing="1">
+<!-- table header -->
+<tr class="theader">
+<td>#</td>
+<td>Artist</td>
+<td>Title</td>
+<td>Track</td>
+<td>Album</td>
+<td>Year</td>
+<td>Genre</td>
+<td>Length</td>
+<td>Bitrate</td>
+<td>Codec</td>
+</tr>
+$select %_index%,0
+<tr class="t%_even_odd%">
+<td>%_counter%</td>
+<td>%artist%</td>
+<td>%title%</td>
+<td>%track%</td>
+<td>%album%</td>
+<td>%year%</td>
+<td>%genre%</td>
+<td>%_length%</td>
+<td>%_bitrate%</td>
+<td>%_codec%</td>
+</tr>
+$endselect
+<!-- table footer -->
+<tr class="theader">
+<td>#</td>
+<td>Artist</td>
+<td>Title</td>
+<td>Track</td>
+<td>Album</td>
+<td>Year</td>
+<td>Genre</td>
+<td>Length</td>
+<td>Bitrate</td>
+<td>Codec</td>
+</tr>
+</table>
+<hr width="100%" noshade size="1">&nbsp;List generated with <a href="http://www.xdlab.ru">%_version%</a>
+<br><br></body></html>
+$document_close

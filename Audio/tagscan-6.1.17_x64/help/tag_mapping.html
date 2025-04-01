@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+<head>
+<title>Tag fields mapping</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+		<h2>Tag fields mapping</h2>
+		<p>Table of mapping between TagScanner internal tag names and various tagging formats.</p>
+        <table width="96%" align="center" class="list2">
+          <tbody>
+            <tr class="head">
+              <td> Name </td>
+              <td> Internal Name </td>
+              <td> ID3v2 </td>
+              <td> Vorbis Comment </td>
+              <td> APEv2 </td>
+              <td> iTunes MP4 </td>
+              <td> Windows Media </td>
+            </tr>
+            <tr>
+              <td>Album</td>
+              <td class="bold"> album </td>
+              <td> TALB </td>
+              <td> ALBUM </td>
+              <td> Album </td>
+              <td>©alb </td>
+              <td> WM/AlbumTitle </td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td class="bold"> title </td>
+              <td> TIT2 </td>
+              <td> TITLE </td>
+              <td> Title </td>
+              <td>©nam </td>
+              <td> Title </td>
+            </tr>
+            <tr>
+              <td>Artist</td>
+              <td class="bold"> artist </td>
+              <td> TPE1 </td>
+              <td> ARTIST </td>
+              <td> Artist </td>
+              <td>©ART </td>
+              <td> Author </td>
+            </tr>
+            <tr>
+              <td>Album Artist</td>
+              <td class="bold"> albumartist </td>
+              <td> TPE2 </td>
+              <td> ALBUMARTIST<br>
+                ALBUM ARTIST<br>
+                BAND<br>
+                ENSEMBLE</td>
+              <td>ALBUMARTIST<br>
+                ALBUM ARTIST<br>
+                BAND<br>
+                ENSEMBLE </td>
+              <td> aART </td>
+              <td> WM/AlbumArtist </td>
+            </tr>
+            <tr>
+              <td>Year</td>
+              <td class="bold"> year </td>
+              <td> TDRC <i>(2.4)</i><br>
+                TYER <i>(2.3)</i></td>
+              <td> DATE </td>
+              <td> Year </td>
+              <td>©day </td>
+              <td> WM/Year </td>
+            </tr>
+            <tr>
+              <td>Composer</td>
+              <td class="bold"> composer </td>
+              <td> TCOM </td>
+              <td> COMPOSER </td>
+              <td> Composer </td>
+              <td>©wrt </td>
+              <td> WM/Composer </td>
+            </tr>
+            <tr>
+              <td>Lyricist</td>
+              <td class="bold"> lyricist </td>
+              <td> TEXT </td>
+              <td> LYRICIST </td>
+              <td> Lyricist </td>
+              <td> ----:com.apple.iTunes:LYRICIST </td>
+              <td> WM/Writer </td>
+            </tr>
+            <tr>
+              <td>Conductor</td>
+              <td class="bold"> conductor </td>
+              <td> TPE3 </td>
+              <td> CONDUCTOR </td>
+              <td> Conductor </td>
+              <td> ©con </td>
+              <td> WM/Conductor </td>
+            </tr>
+            <tr>
+              <td>Remixed by</td>
+              <td class="bold"> remixedby</td>
+              <td> TPE4 </td>
+              <td> REMIXEDBY<br>
+                VERSION <br>MIXARTIST</td>
+              <td>REMIXEDBY<br>MIXARTIST</td>
+              <td> ----:com.apple.iTunes:REMIXEDBY </td>
+              <td> WM/ModifiedBy </td>
+            </tr>
+            <tr>
+              <td> Grouping</td>
+              <td class="bold"> contentgroup </td>
+              <td> TIT1 </td>
+              <td> GROUPING<br>
+                CONTENTGROUP </td>
+              <td> CONTENTGROUP </td>
+              <td>©grp </td>
+              <td> WM/ContentGroupDescription </td>
+            </tr>
+            <tr>
+              <td> Subtitle</td>
+              <td class="bold"> subtitle </td>
+              <td> TIT3 </td>
+              <td> SUBTITLE </td>
+              <td> Subtitle </td>
+              <td> ----:com.apple.iTunes:SUBTITLE </td>
+              <td> WM/SubTitle </td>
+            </tr>
+            <tr>
+              <td> Track </td>
+              <td class="bold"> track </td>
+              <td> TRCK </td>
+              <td> TRACKNUMBER </td>
+              <td> Track </td>
+              <td> trkn </td>
+              <td> WM/Track<br>
+                WM/TrackNumber </td>
+            </tr>
+            <tr>
+              <td>--</td>
+              <td class="bold"> totaltracks </td>
+              <td>TRCK</td>
+              <td> TOTALTRACKS*<br>TRACKTOTAL</td>
+              <td>TOTALTRACKS*</td>
+              <td> trkn </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Disc</td>
+              <td class="bold"> disc </td>
+              <td> TPOS </td>
+              <td> DISCNUMBER </td>
+              <td>DISCNUMBER</td>
+              <td> disk </td>
+              <td> WM/PartOfSet </td>
+            </tr>
+            <tr>
+              <td>--</td>
+              <td class="bold"> totaldiscs </td>
+              <td>TPOS</td>
+              <td> TOTALDISCS*<br>DISCTOTAL</td>
+              <td>TOTALDISCS*</td>
+              <td> disk </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Compilation</td>
+              <td class="bold"> compilation </td>
+              <td> TCMP </td>
+              <td> COMPILATION </td>
+              <td> Compilation </td>
+              <td> cpil </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Comment</td>
+              <td class="bold"> comment [description] </td>
+              <td> COMM [description] </td>
+              <td> COMMENT<br>
+                DESCRIPTION </td>
+              <td> Comment </td>
+              <td>©cmt </td>
+              <td> Description<br>
+                WM/Comments </td>
+            </tr>
+            <tr>
+              <td>Genre</td>
+              <td class="bold"> genre </td>
+              <td> TCON </td>
+              <td> GENRE </td>
+              <td> Genre </td>
+              <td>©gen </td>
+              <td> WM/Genre </td>
+            </tr>
+            <tr>
+              <td>Rating</td>
+              <td class="bold"> rating </td>
+              <td> POPM </td>
+              <td> RATING </td>
+              <td> Rating </td>
+              <td> rate </td>
+              <td> WM/SharedUserRating </td>
+            </tr>
+            <tr>
+              <td> BPM</td>
+              <td class="bold"> bpm </td>
+              <td> TBPM </td>
+              <td> BPM </td>
+              <td> BPM </td>
+              <td> tmpo </td>
+              <td> WM/BeatsPerMinute </td>
+            </tr>
+            <tr>
+              <td> Mood</td>
+              <td class="bold"> mood </td>
+              <td> TMOO </td>
+              <td> MOOD </td>
+              <td> Mood </td>
+              <td> ----:com.apple.iTunes:MOOD </td>
+              <td> WM/Mood </td>
+            </tr>
+            <tr>
+              <td>ISRC</td>
+              <td class="bold"> isrc </td>
+              <td> TSRC </td>
+              <td> ISRC </td>
+              <td> ISRC </td>
+              <td> ----:com.apple.iTunes:ISRC </td>
+              <td> WM/ISRC </td>
+            </tr>
+            <tr>
+              <td> Copyright</td>
+              <td class="bold"> copyright </td>
+              <td> TCOP </td>
+              <td> COPYRIGHT </td>
+              <td> Copyright </td>
+              <td> cprt </td>
+              <td> Copyright </td>
+            </tr>
+            <tr>
+              <td>Lyrics</td>
+              <td class="bold"> lyrics [description] </td>
+              <td> USLT [description] </td>
+              <td> LYRICS </td>
+              <td> Lyrics<br>
+                UNSYNCEDLYRICS </td>
+              <td>©lyr </td>
+              <td> WM/Lyrics </td>
+            </tr>
+            <tr>
+              <td>URL</td>
+              <td class="bold"> www </td>
+              <td>WXXX</td>
+              <td> LOCATION <br>
+                WWW</td>
+              <td> WWW </td>
+              <td>----:com.apple.iTunes:WWW </td>
+              <td>WM/UserWebURL</td>
+            </tr>
+            <tr>
+              <td>Media</td>
+              <td class="bold"> mediatype </td>
+              <td> TMED </td>
+              <td> MEDIATYPE </td>
+              <td> MEDIATYPE </td>
+              <td>stik</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Publisher</td>
+              <td class="bold"> publisher </td>
+              <td> TPUB </td>
+              <td> PUBLISHER<br>
+                ORGANIZATION </td>
+              <td> PUBLISHER</td>
+              <td> ----:com.apple.iTunes:PUBLISHER </td>
+              <td> WM/Publisher </td>
+            </tr>
+            <tr>
+              <td>Original artist</td>
+              <td class="bold"> origartist </td>
+              <td> TOPE </td>
+              <td> ORIGARTIST </td>
+              <td>ORIGARTIST</td>
+              <td> ----:com.apple.iTunes:ORIGARTIST</td>
+              <td> WM/OriginalArtist</td>
+            </tr>
+            <tr>
+              <td> Encoded By</td>
+              <td class="bold"> encodedby </td>
+              <td> TENC </td>
+              <td> ENCODEDBY<br>
+                ENCODER </td>
+              <td> EncodedBy </td>
+              <td>©too </td>
+              <td> WM/EncodedBy </td>
+            </tr>
+            <tr>
+              <td> Album Sort Order</td>
+              <td class="bold"> albumsort </td>
+              <td> TSOA</td>
+              <td> ALBUMSORT </td>
+              <td> ALBUMSORT </td>
+              <td> soal </td>
+              <td> WM/AlbumSortOrder </td>
+            </tr>
+            <tr>
+              <td> Album Artist Sort Order </td>
+              <td class="bold"> albumartistsort </td>
+              <td>TSO2</td>
+              <td> ALBUMARTISTSORT </td>
+              <td> ALBUMARTISTSORT </td>
+              <td> soaa </td>
+              <td> WM/AlbumArtistSortOrder </td>
+            </tr>
+            <tr>
+              <td> Artist Sort Order </td>
+              <td class="bold"> artistsort </td>
+              <td> TSOP</td>
+              <td> ARTISTSORT </td>
+              <td> ARTISTSORT </td>
+              <td> soar </td>
+              <td> WM/ArtistSortOrder </td>
+            </tr>
+            <tr>
+              <td> Title Sort Order</td>
+              <td class="bold"> titlesort </td>
+              <td> TSOT</td>
+              <td> TITLESORT </td>
+              <td> TITLESORT </td>
+              <td> sonm </td>
+              <td> WM/TitleSortOrder </td>
+            </tr>
+            <tr>
+              <td> Composer Sort Order </td>
+              <td class="bold"> composersort </td>
+              <td> TSOC</td>
+              <td></td>
+              <td></td>
+              <td> soco </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Show Name Sort Order</td>
+              <td class="bold"> tvshowsort </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td> sosn </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Gapless Playback</td>
+              <td class="bold"> gapless </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td> pgap </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Podcast</td>
+              <td class="bold"> podcast </td>
+              <td>PCST </td>
+              <td></td>
+              <td></td>
+              <td> pcst </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Podcast URL</td>
+              <td class="bold"> podcasturl </td>
+              <td>WFED </td>
+              <td></td>
+              <td></td>
+              <td> purl </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> Show Name</td>
+              <td class="bold"> tvshow </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td> tvsh </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+		<p class="footer">Copyright 1999-2019 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

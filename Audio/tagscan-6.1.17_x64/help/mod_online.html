@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<title>TAG Processor</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+	  <h2>ONLINE</h2>
+	  Searching for album information and covers.
+		<p>
+			Send request to prefered service and select desired album from list. You can unselect individual tracks if they are not needed.
+		</p>
+		<p>
+			Click <b class="but">Save</b> to import data into selected files.
+		</p>
+        <h3>Freedb, Tracktype</h3>
+				<p>
+        These online services allow to get only textual information and only for one disc at one time.<br>
+        Is it recommended to use these services only for automatic search the related data on selected tracks. 
+        For manual search it is recommended to use other services.<br>
+			  </p>
+        You can choose between different methods for getting information:
+        <table cellpadding="2" class="list">
+          <tr>
+            <td class="act">Calculate DiscID from selected files</td>
+            <td>Select all tracks from only one album in correct order. </td>
+          </tr>
+          <tr>
+            <td class="act">Search in database</td>
+            <td> Enter artist or album name in <b class="box">Search</b> box.</td>
+          </tr>
+          <tr>
+            <td class="act">Manual query</td>
+            <td>Enter a <b>DiskID</b> by yourself. You can find a DiskID by using the search function at freedb.org.</td>
+          </tr>
+        </table>
+        <p>
+        Click <b class="but">Search</b> to make request to service.
+				</p>
+        <p>
+        If you have problems with displaying of received album info, click <img class="glyph" src="i/glyphs_09.png"> <b class="box">Convert codepage</b> and choose the appropriate codepage from the menu.
+				</p>
+        <p>
+        If you want to write Artist name instead 'VA' into Artist tag for compilations, just check <b class="box">Mark as compilation</b> in <img class="glyph" src="i/glyphs_08.png"> menu.
+				</p>
+        <h3>Discogs, MusicBrainz </h3>
+				<p>
+        These services allow to get text information and cover art for all types of media and support multidisc albums and compilations.
+			  </p>
+        <p>
+        Enter lookup text and click <strong class="but">Search</strong> to run searching.   <br>
+				Also you can search for necessary album in browser and then enter album ID in search box to get data without searching.
+				</p>
+      	<p>
+          You can select information (intividual tags, covers) you want to save to a file and see additional options  by pressing <img class="glyph" src="i/glyphs_08.png"> .
+				<p>
+    		<p class="footer">Copyright 1999-2023 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

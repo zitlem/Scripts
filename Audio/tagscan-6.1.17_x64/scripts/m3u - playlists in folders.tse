@@ -1,0 +1,17 @@
+﻿# Tagscanner export script
+
+$file_name %filepath%%albumartist% - %album% (%year%).m3u
+$file_notes Playlist for each folder
+$file_encoding ansi
+$file_writebom 0
+$file_relativepaths 1
+
+$document_open
+$select %filepath%,0
+#EXTM3U
+$select %filenameext%,0
+#EXTINF:%_length_sec%,%albumartist% - %title%
+%fullfilenameext%
+$endselect
+$endselect
+$document_close

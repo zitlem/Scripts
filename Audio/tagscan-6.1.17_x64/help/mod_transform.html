@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<title>Transformations</title>
+<link type="text/css" rel="stylesheet" href="st.css">
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+		<h2>Transformations</h2>
+		<p>
+		Transformations is a special module which can help you to beautify and clean up your tags and filenames.
+		</p>
+		<p>Tagscanner comes with predefined scripts for some popular tasks. You can create your own scripts. </p>
+    <p>
+        Just select list of <b class="box">Fields</b> which need to change and configure transformations.
+    </p>
+        Available operations:
+				<table class="info">
+					<tr><td><a href="#1">Case change</a></td></tr>
+					<tr><td><a href="#2">Text replacement</a></td></tr>
+					<tr><td><a href="#3">Format value</a></td></tr>
+				</table>
+				<p>
+        You can combine these operation inside a script and then combine scripts.</p>
+        <div class="msg">All transform scripts work globally for all program modules.</div>
+
+            <h3>Case change</h3>
+			<a name="1"></a>
+            <p>This function allows you to convert the text case in various ways.</p>
+
+            <h3>Text replacement</h3>
+			<a name="2"></a>
+            <p>This function may help you to clean-up and normalize tags and filenames.
+			<div class="msg">Just keep Original field empty to replace filed value in any case.</div>
+			</p>
+			<p>Supported work with <a href="https://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a> (PRCE).</p>
+
+            <h3>Format value</h3>
+			<a name="3"></a>
+            <p>Set field value with full power of scripting functions and placeholders.
+			    <div class="msg">Use special placeholder %_field% to replace it with value of currently processed field.</div>
+			</p>			
+
+		<p class="footer">Copyright 1999-2023 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

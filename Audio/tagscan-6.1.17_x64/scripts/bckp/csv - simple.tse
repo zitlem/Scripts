@@ -1,0 +1,12 @@
+﻿# Tagscanner export script
+
+$file_name TrackList.csv
+$file_notes Raw comma-separated text
+$file_encoding utf-8
+$file_writebom 1
+
+$document_open
+$select %_index%,0
+%title%;%artist%;%album%;%track%;%year%;%genre%;%_length_sec%;%_filesize%;%_filedate%;%filepath%;%filenameext%
+$endselect
+$document_close

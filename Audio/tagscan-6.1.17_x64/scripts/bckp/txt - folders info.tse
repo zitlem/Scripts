@@ -1,0 +1,26 @@
+﻿# Tagscanner export script
+
+$file_name %filepath%%albumartist% - %album% (%year%).txt
+$file_notes Text file with information for each folder
+$file_encoding utf-8
+$file_writebom 1
+
+$document_open
+$select %filepath%,0
+Artist       : %artist%
+Album        : %album%
+Genre        : %genre%
+Year         : %year%[
+Label        : %publisher%]
+Tracks       : %_totalfiles%
+Playtime     : %_totallength%
+Size         : %_totalsize%
+Codec        : %_codec%[ / %_codec_profile%][ / %_bitrate% kbps]
+
+$select %filenameext%,0
+%track%. %title% (%_length%)
+$endselect
+
+File generated %_now% with %_version%
+$endselect
+$document_close

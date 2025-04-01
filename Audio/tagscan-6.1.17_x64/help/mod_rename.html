@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<title>RENAME</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+		<h2>RENAME</h2>
+		<p>
+		Rename and organize files based on the tag information.
+		</p>
+		<p>
+		Select the file(s) to rename by using the mouse or the keyboard.
+		</p>
+        <p>
+        The <b class="box">Filename pattern</b> string defines how the file name will look after renaming.<br>
+        The string may contain of any characters, <a href="tag_list.html">placeholders</a> and <a href="tag_script.html">functions</a>.
+        Placeholders in this string will be replaced with the respective values when you execute rename operation. <br>
+			  </p>
+
+				<p>
+				Click <b class="but">Rename</b> button and enjoy result or <b class="but">Preview</b> to make sure your new file names are just the way you want them.
+				</p>
+
+        <div class="msg"> Use the backslash <b class="box">\</b> in filename pattern to create subfolders. <br>Root folder in this case is a folder containing the file instead a working path or destination folder if you use <b class="box">Reorganize</b> function. </div>
+        <div class="msgx">
+          <div class='el'>Example -  Simple renaming </div>
+          <span class='fld'>Format string:</span> %track% - %artist% - %title% <br>
+          <span class='fld'>Result:</span> 01 - Artist - Title
+				</div>
+
+<h3>Reorganize files</h3>
+<p>
+You can use reorganize feature to create new folder structure based on tag data. This feature is very handy to arranhe your music collection.
+</p>
+<p>
+Select <img class="glyph" src="i/glyphs_35.png"> <b class="box">Destination folder</b> and option to move or copy files to new structure.
+</p>
+        <div class="msgx">
+          <div class='el'>Example -  Move albums to new location </div>
+          <span class='fld'>Format string:</span> %albumartist% - %year% - %album%\[cd%disc%\]%track% - %artist% - %title% <br>
+          <span class='fld'>Restructure:</span> ON<br>
+          <span class='fld'>Destination folder:</span> D:\MP3\<br>
+          <span class='fld'>Results:</span><br>
+          D:\MP3\Album Artist - 2010 - New Album\01 - Artist - Title<br>
+          D:\MP3\Album Artist - 2010 - New Album\02 - Artist - Title<br>
+          D:\MP3\Album Artist - 2010 - Other Album\cd1\01 - Artist - Title<br>
+          D:\MP3\Album Artist - 2010 - Other Album\cd2\01 - Artist - Title
+		  </div>
+		  <p class="footer">Copyright 1999-2019 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

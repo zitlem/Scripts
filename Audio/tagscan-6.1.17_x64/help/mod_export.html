@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title>Export</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+	  <h2>Export</h2>
+	  <p>Create playlists and export information about your music collection to user-defined file formats.</p>
+        <p>Tagscanner comes with predefined scripts for most popular formats like CSV, XML, HTML. You can change filename for exported file and encoding of content. </p>
+        <div class="msg">Use CSV (Comma Separated Values) format if you want to work with  database software like Access or MySql.</div>
+
+        <h3>Export scripts</h3>
+        <p>Export feature uses simple scripting language so you can create your own script to generate required file format. </p>
+        <p>Export script contains two sections: exported file configuration (reflected in program interface) and loops which generate content of this file. </p>
+                <div class="msgx">
+                <div class='el'>1. Configuration </div>
+          <strong>$file_name</strong> TrackList.csv<br>
+          <strong>$file_notes</strong> Raw comma-separated text<br>
+          <strong>$file_encoding</strong> utf-8<br>
+        <strong>$file_writebom</strong> 1 <br>
+        <br>
+         <div class='el'>2. Content </div>
+        <strong>$document_open</strong><br>
+        <strong>$select</strong> %_index%,0<br>
+%title%;%artist%;%album%;%track%;%year%;%genre%;%_length_sec%;%_filesize%;%_filedate%;%filepath%;%filenameext%<br>
+<strong>$endselect</strong><br>
+<strong>$document_close</strong><br>
+
+        </div>
+        <p> You can specify any text and unlimited number of placeholders as configuration parameters and content of exported file.</p>
+        <p> List of avalaible configuration parameters <br>
+        <table cellpadding="2" class="list">
+          <tr>
+            <td class="act">$file_name</td>
+            <td>Name of exported file. Can contain absolute or relative path to generated file </td>
+          </tr>
+          <tr>
+            <td class="act">$file_notes</td>
+            <td>Description of script visible in program interface</td>
+          </tr>
+          <tr>
+            <td class="act">$file_encoding </td>
+            <td>[ansi, utf-8, utf-16] Encoding of file content</td>
+          </tr>
+          <tr>
+            <td class="act">$file_writebom </td>
+            <td>[0 ,1] Write unicode Byte Order Mark (BOM) required for some software to detect the Unicode data in a file</td>
+          </tr>
+          <tr>
+            <td class="act">$file_ishtml </td>
+            <td>[0 ,1] Option replaces all special characters like &amp; with special html-friendly equivalents.</td>
+          </tr>
+          <tr>
+            <td class="act">$file_relativepaths </td>
+            <td>[0 ,1] Option change all used file paths to relative to current file</td>
+          </tr>
+        </table>
+        </p>
+        <p>All content between <strong>$document_open</strong> and <strong>$document_close</strong> will be placed inside generated file.</p>
+        <p>Command <strong>$select %any_fields%,0</strong> selects files with values according to first parameter and starts a loop. Command <strong>$endselect</strong> is marker of ending of repeating part.<br>
+         If you want to limit number of selected entries (i.e. to avoid duplicates) just set number of required elements in second parameter.<br>
+		 All selected entries are sorted by the selection parameter. <br>
+         You can use up to 10 nested selects.
+        </p>
+        <p>There is a special placeholders which can be used inside export scripts:<br>
+          <table width="96%" align="center" class="list2">
+          <tr class="head">
+            <td colspan="2"> Special </td>
+          </tr>
+          <tr>
+            <td class="bold">%_now%</td>
+            <td>Timestamp </td>
+          </tr>
+          <tr>
+            <td class="bold">%_version%</td>
+            <td>TagScanner version. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_gcounter%</td>
+            <td>Counter from 1 to number of affected files </td>
+          </tr>
+          <tr>
+            <td class="bold">%_even_odd%</td>
+            <td>Print 'even' or 'odd' for current file </td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Current loop </td>
+          </tr>
+          <tr>
+            <td class="bold">%_totalfiles%</td>
+            <td>Total number of files </td>
+          </tr>
+          <tr>
+            <td class="bold">%_totallength%</td>
+            <td>Total playback length </td>
+          </tr>
+          <tr>
+            <td class="bold">%_totalsize%</td>
+            <td>Total size of files </td>
+          </tr>
+          <tr>
+            <td class="bold">%_counter%</td>
+            <td>Counter from 1 to number of selected entries </td>
+          </tr>
+        </table>
+		<p class="footer">Copyright 1999-2019 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

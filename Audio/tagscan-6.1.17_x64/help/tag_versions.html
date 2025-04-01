@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<title>Tags information</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+	    <h2>TAGs information</h2>
+        <p> Program supports ID3 1.0/1.1/2.2/2.3/2.4 tags, APE v1 and v2 tags, Vorbis Comments, WMA tags and MP4(iTunes) metadata. Some files may contain several tags at the same time. <br>
+          <br>
+          Table of combinations of file formats and tags:
+        <table width="96%" align="center" class="list2">
+          <tr class="head">
+            <td> File/Tag format</td>
+            <td> Reading</td>
+            <td> Saving</td>
+          </tr>
+          <tr>
+            <td class="bold">Advanced Audio Coding <br>
+              aac </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, ID3v2 </td>
+          </tr>
+					<tr>
+            <td class="bold">Audio Interchange File Format <br>
+              aif, aiff </td>
+            <td> ID3 chunk </td>
+            <td> ID3 chunk </td>
+          </tr>
+					<tr>
+            <td class="bold">Direct Stream Digital <br>
+              dsf </td>
+            <td> ID3v2 </td>
+            <td> ID3v2 </td>
+          </tr>
+          <tr>
+            <td class="bold">Monkey's Audio <br>
+              ape, mac </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, APEv2 </td>
+          </tr>
+          <tr>
+            <td class="bold">Free Lossless Audio Codec <br>
+              flac </td>
+            <td> ID3v2, Vorbis Comments</td>
+            <td> Vorbis Comments </td>
+          </tr>
+          <tr>
+            <td class="bold">MPEG Audio <br>
+              mp1, mp2, mp3 </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1, ID3v2, APEv2&sup2; </td>
+          </tr>
+          <tr>
+            <td class="bold">MPEG-4 <br>
+              mp4, m4a, m4b, m4r </td>
+            <td> MP4/iTunes metadata </td>
+            <td> MP4/iTunes metadata </td>
+          </tr>
+          <tr>
+            <td class="bold">Musepack <br>
+              mpc, mpp, mp+ </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, APEv2 </td>
+          </tr>
+          <tr>
+            <td class="bold">Ogg Vorbis <br>
+              ogg </td>
+            <td> Vorbis Comments </td>
+            <td> Vorbis Comments </td>
+          </tr>
+          <tr>
+            <td class="bold">OptimFROG (DualStream)<br>
+              ofr, ofs </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, APEv2 </td>
+          </tr>
+          <tr>
+            <td class="bold">Speex <br>
+              spx </td>
+            <td> Vorbis Comments </td>
+            <td> Vorbis Comments </td>
+          </tr>
+          <tr>
+            <td class="bold">True Audio <br>
+              tta </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, APEv2</td>
+          </tr>
+          <tr>
+            <td class="bold">Windows Media Audio <br>
+              wma, asf </td>
+            <td> WindowsMedia metadata </td>
+            <td> WindowsMedia metadata </td>
+          </tr>
+					<tr>
+            <td class="bold">Waveform Audio File Format  <br>
+              wav </td>
+            <td> RIFF LIST INFO, ID3 chunk</td>
+            <td> RIFF LIST INFO, ID3 chunk </td>
+          </tr>
+          <tr>
+            <td class="bold">WavPack <br>
+              wv </td>
+            <td> ID3v1, ID3v2, APEv1, APEv2 </td>
+            <td> ID3v1&sup1;, APEv2 </td>
+          </tr>
+        </table>
+				&sup1; Update ID3v1 tag only if it exists before (by default)
+				<br>
+				&sup2; Update APEv2 tag inside MP3 files only if it exists before
+        <p>
+				You can change tags reading priority in program options.
+				<br>
+        Program reads tag-information only once and not refreshing it when you switched to another tags reading mode, so press <b class="but">Ctrl + F5</b> to update view.
+				</p>
+				<p>
+        Program never deletes any unsupported tag fields.
+        </p>
+				<p>
+        All tags except ID3v1, ID3v2 and APEv1 always saved in Unicode. ID3v1 and APEv1 tags don't support Unicode at all and ID3v2 tags can optionally save Unicode data (ON by default).<br>
+        If you interact with programs, portables or car audios which have problems with ID3v2 tags stored in Unicode just uncheck ID3v2 unicode saving option.
+				</p>
+        <div class="msg">ID3v2 tags stored in beginning of the file, so program needs to move all file data and that's why write process may take too much time at first time. OGG, WMA, MP4 files are recreated anew in most cases, that's why write process may take appreciable time for every change.</div>
+
+		<p class="footer">Copyright 1999-2019 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

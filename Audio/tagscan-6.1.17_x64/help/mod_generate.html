@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<title>TAG Processor</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+    <div class="cont">
+	  <h2>GENERATE</h2>
+		<p>
+	  This module is designed to automatically fill in tag data in batch mode.
+		</p>
+        Available operations:
+		<table class="info">
+			<tr><td><img class="glyph" src="i/glyphs_30.png"></td><td><a href="#1">Generate tag from file/foldernames</a></td></tr>
+			<tr><td><img class="glyph" src="i/glyphs_34.png"></td><td><a href="#2">Fill and format tags from other fields</a></td></tr>
+			<tr><td><img class="glyph" src="i/glyphs_31.png"></td><td><a href="#3">Get tag from from text file</a></td></tr>
+		</table>
+
+		You can choose between different methods to handle <b class="box">Existing values</b> :
+		<table cellpadding="2" class="list">
+			<tr>
+				<td class="act">Keep</td>
+				<td>Preserve existing values</td>
+			</tr>
+			<tr>
+				<td class="act">Update</td>
+				<td>Update tag with new values</td>
+			</tr>
+		</table>
+
+
+        <div class="msg">Please use <b class="but">Preview</b> to make sure the results are correct.</div>
+
+        <h3>Generate tag from file/foldernames</h3>
+				<a name="1"></a>
+				<p>
+        The <b class="box">Scheme of filename</b> string describes structure of the filename. The <a href="tag_list.html">placeholders</a> are used to mark the parts of the filename which will be copied into the tag. <br>
+        You can use special placeholder <b class="box">%ignore%</b> to skip unnecessary parts of filename.
+				</p>
+        <p>
+        Use the backslash to include upper level foldernames in the format string.
+				</p>
+				<p>
+        Use the <b class="box">< ></b> around placeholder to append additional text to part of filename directly in formatting string. <br>
+				</p>
+        <p>
+        Click <b class="but">Generate</b> to save tag data into selected files.
+				</p>
+        <div class="msgx">
+          <div class='el'>Example -  Get Artist and Title from filename </div>
+          <span class='fld'>Filename:</span> D:\MP3\Album Artist - 2010 - New Album\01 - Artist - Title <br>
+          <span class='fld'>Scheme of filename:</span> %ignore% - %artist% - %title% <br>
+          <span class='fld'>Results:</span> <br>
+          ARTIST = Artist<br>
+          TITLE = Title </div>
+        <div class="msgx">
+          <div class='el'>Example -  Get complete data</div>
+          <span class='fld'>Filename:</span> D:\MP3\Album Artist - 2010 - New Album promo\01 - Artist - Title <br>
+          <span class='fld'>Scheme of filename:</span> %albumartist% - %year% - &lt;%album% (Limited edition)&gt; promo\%track% - %artist% - %title% <br>
+          <span class='fld'>Results:</span><br>
+          ALBUMARTIST = Album Artist<br>
+          YEAR  = 2010<br>
+          ALBUM = New Album (Limited edition)<br>
+          TRACK = 01<br>
+          ARTIST = Artist<br>
+          TITLE = Title </div>
+        <br>
+
+
+        <h3>Fill and format tags from other fields</h3>
+<a name="2"></a>
+				<p>
+        The <b class="box">Source</b> string defines input text and may contain of any characters, <a href="tag_list.html">placeholders</a> and <a href="tag_script.html">functions</a>.
+				<br>
+        Placeholders in this string will be replaced with the respective values.
+				</p>
+				<p>
+        The <b class="box">Scheme</b> string describes structure of the source string. The <a href="tag_list.html">placeholders</a> used to mark the parts of the source string which will be copied into the tag.
+				</p>
+				<p>
+        Click <b class="but">Generate</b> to save tag data into selected files.
+				</p>
+        <div class="msgx">
+          <div class='el'>Example - TITLE field contain data in style: Artist \ Song Title </div>
+          <span class='fld'>Source:</span> %title% <br>
+          <span class='fld'>Scheme:</span> %artist% \ %title%<br>
+          <span class='fld'>Results:</span><br>
+          ARTIST = Artist<br>
+          TITLE = Song Title 
+		</div>
+		<div class="msgx">
+          <div class='el'>Example - swap ARTIST and TITLE</div>
+          <span class='fld'>Source:</span> %artist%~%title% <br>
+          <span class='fld'>Scheme:</span> %title%~%artist%<br>
+          where ~ just any unique symbol.<br>
+          <span class='fld'>Results:</span><br>
+          ARTIST = Song Title<br>
+          TITLE = Artist 
+		</div>
+        <div class="msgx">
+          <div class='el'>Example - Append text to TITLE field</div>
+          <span class='fld'>Source:</span> some %title% text<br>
+          <span class='fld'>Scheme:</span> %title%<br>
+          <span class='fld'>Results:</span><br>
+          TITLE = some Title text 
+		</div>
+        <div class="msgx">
+          <div class='el'>Example - Move "The" to beginning from Beatles, The</div>
+          <span class='fld'>Source:</span> $if($equal($right(%artist%, 4), The), The $cut(%artist%, 5), %artist%)<br>
+          <span class='fld'>Scheme:</span> %artist%<br>
+          <span class='fld'>Results:</span><br>
+          ARTIST = The Beatles 
+		</div>
+
+        <br>
+
+        <h3>Get tag from from text file</h3>
+<a name="3"></a>
+        Select <b class="box">Filename</b> of the source text file. <br>
+        <br>
+        The <b class="box">Scheme</b> string describes the format of each line in the text file. The <a href="tag_list.html">placeholders</a> used to mark the parts of the source string which are copied into the tag.<br>
+        <br>
+        You can skip a few lines from the beginning of the file.<br>
+        <br>
+				<p>
+        Click <b class="but">Generate</b> to save tag data into selected files.
+				</p>
+        <div class="msgx">
+          <div class='el'>Example -  Get data from CSV file </div>
+          <span class='fld'>Format string:</span> %artist%;%title%;%track%; <br>
+          <span class='fld'>Results:</span> <br>
+          ARTIST = Artist<br>
+          TITLE = Title<br>
+          TRACK = 01
+		</div>
+		<p class="footer">Copyright 1999-2023 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

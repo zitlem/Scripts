@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<title>Placeholders</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+				<h2>Placeholders</h2>
+        <p>A placeholder is a tag-field name or internal variable enclosed in percent signs, e.g %artist%.<br>
+				Placeholders can be used with <a href="tag_script.html">scripting functions</a> (for tagging, for file renaming and other features). </p>
+        <table width="96%" align="center" class="list2">
+          <tr class="head">
+            <td colspan="2" >Metadata </td>
+          </tr>
+          <tr>
+            <td class="bold">%title%</td>
+            <td>Title of the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%artist%</td>
+            <td>Name of the artist of the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%album%</td>
+            <td>Name of the album specified track belongs to.</td>
+          </tr>
+          <tr>
+            <td class="bold">%albumartist%</td>
+            <td>Name of the artist of the album specified track belongs to.</td>
+          </tr>
+          <tr>
+            <td class="bold">%track%</td>
+            <td>Index of specified track within the album. </td>
+          </tr>
+          <tr>
+            <td class="bold">%totaltracks%</td>
+            <td>Total number of tracks within the album. </td>
+          </tr>
+          <tr>
+            <td class="bold">%disc%</td>
+            <td>Index of disc specified track belongs to, within the album. </td>
+          </tr>
+          <tr>
+            <td class="bold">%totaldiscs%</td>
+            <td>Total number of discs within the album. </td>
+          </tr>
+          <tr>
+            <td class="bold">%year%</td>
+            <td>Release date of the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%genre%</td>
+            <td>Genre of the album. </td>
+          </tr>
+          <tr>
+            <td class="bold">%comment%</td>
+            <td>Comments for specified track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%composer%</td>
+            <td>Returns the name of the music composer. </td>
+          </tr>
+          <tr>
+            <td class="bold">%bpm%</td>
+            <td>Returns the beats per minute of the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%publisher%</td>
+            <td>Returns the name of the company that published the content. </td>
+          </tr>
+          <tr>
+            <td class="bold">%contentgroup%</td>
+            <td>Returns a description of the content group. (Grouping field) </td>
+          </tr>
+          <tr>
+            <td class="bold">%encodedby%</td>
+            <td>Returns the name of the person or software that encoded the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%copyright%</td>
+            <td>Returns a copyright message for the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%origartist%</td>
+            <td>Returns the name of the artist who originally produced the content. </td>
+          </tr>
+          <tr>
+            <td class="bold">%www%</td>
+            <td>Returns the address of a Web site. </td>
+          </tr>
+          <tr>
+            <td class="bold">%conductor%</td>
+            <td>Returns the name of the conductor. </td>
+          </tr>
+          <tr>
+            <td class="bold">%isrc%</td>
+            <td>Returns the international standard recording code (ISRC). </td>
+          </tr>
+          <tr>
+            <td class="bold">%remixedby%</td>
+            <td>Returns the name of a person or group that modified the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%subtitle%</td>
+            <td>Returns the subtitle of the track. </td>
+          </tr>
+          <tr>
+            <td class="bold">%lyricist%</td>
+            <td>Returns the name of the writer who wrote the words of the track. </td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Special </td>
+          </tr>
+          <tr>
+            <td class="bold">%_nl%</td>
+            <td>Line break symbol. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_counter%</td>
+            <td>Counter from 1 to number of affected files. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_index%</td>
+            <td>Unique index of file in list. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_paramstr%</td>
+            <td>Startup options. </td>
+          </tr>
+		  <tr>
+            <td class="bold">%_scan_time%</td>
+            <td>Shows file parsing time in microseconds. </td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Technical information </td>
+          </tr>
+          <tr>
+            <td class="bold">%_bitrate%</td>
+            <td>Bitrate of the track in kbit/s. </td>
+          </tr>
+					<tr>
+            <td class="bold">%_bitspersample%</td>
+            <td>Bit depth. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_channels%</td>
+            <td>Number of channels in the track (mono/stereo/etc). Returns the number of channels in text form; returns "mono" and "stereo" instead of "1" and "2". </td>
+          </tr>
+          <tr>
+            <td class="bold">%_codec%</td>
+            <td>Codec name. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_codec_profile%</td>
+            <td>Returns a information about coding parameters . </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filesize%</td>
+            <td>Returns the filesize formatted as Kilo or Mega bytes. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filesize_bytes%</td>
+            <td>Returns the filesize in bytes. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filedate%</td>
+            <td>Returns the date and time of file modification. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filedate_iso%</td>
+            <td>Returns the date and time of file modification as YYYY-MM-DD hh:mm:ss. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filedate_rfc%</td>
+            <td>Returns the date and time of file modification in RFC822 format. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filedate_create%</td>
+            <td>Returns the date and time of file creation. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_filedate_create_iso%</td>
+            <td>Returns the date and time of file creation as YYYY-MM-DD hh:mm:ss. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_length%</td>
+            <td>Returns the length of the track formatted as hours, minutes, and seconds. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_length_sec%</td>
+            <td>Returns the length of the track in seconds. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_length_msec%</td>
+            <td>Returns the length of the track in milliseconds. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_samplerate%</td>
+            <td>Samplerate of the track in Hz. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_tagtype%</td>
+            <td>List of tag types in the file. </td>
+          </tr>
+		  <tr>
+            <td class="bold">%_tool%</td>
+            <td>Information about encoding tool (if available). </td>
+          </tr>
+          <tr>
+            <td class="bold">%_cover_size%</td>
+            <td>Returns embedded size of first available cover. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_cover_width%</td>
+            <td>Returns width of first available cover. </td>
+          </tr>
+          <tr>
+            <td class="bold">%_cover_height%</td>
+            <td>Returns height of first available cover. </td>
+          </tr>
+		  <tr>
+            <td class="bold">%_flac_md5%</td>
+            <td>Returns checksum for uncompressed data. </td>
+          </tr>
+		  <tr>
+            <td class="bold">  %_mpeg_copyright%<br>
+  %_mpeg_protectection%<br>
+  %_mpeg_original%<br>
+  %_mpeg_private%<br>
+  %_mpeg_emphasis%</td>
+            <td>Returns MPEG stream extened info </td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Filenames </td>
+          </tr>
+          <tr>
+            <td class="bold">%filename%</td>
+            <td>File name without extension. </td>
+          </tr>
+          <tr>
+            <td class="bold">%fileext%</td>
+            <td>File extension. </td>
+          </tr>
+          <tr>
+            <td class="bold">%filenameext%</td>
+            <td>File name with extension. </td>
+          </tr>
+          <tr>
+            <td class="bold">%filepath%</td>
+            <td>Full path to file. </td>
+          </tr>
+          <tr>
+            <td class="bold">%fullfilenameext%</td>
+            <td>Full file name with path and extension. </td>
+          </tr>
+          <tr>
+            <td class="bold">%foldername%</td>
+            <td>Name of folder wich contain file. </td>
+          </tr>
+          <tr>
+            <td class="bold">%foldername2%</td>
+            <td>Name of two levels up folder wich contain file. </td>
+          </tr>
+          <tr>
+            <td class="bold">%foldername3%</td>
+            <td>Name of three levels up folder wich contain file. </td>
+          </tr>
+          <tr>
+            <td class="bold">%workpath%</td>
+            <td>Current working path. </td>
+          </tr>
+        </table>
+
+		<p class="footer">Copyright 1999-2019 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

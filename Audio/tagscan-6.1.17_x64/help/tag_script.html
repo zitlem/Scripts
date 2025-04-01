@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<title>Scripting</title>
+<link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+<body>
+	<div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+			<ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+				<li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+				<li><a href="commands.html">Commands</a></li>
+			</ul>
+			<li><a href="fileview.html">File view</a></li>
+			<li><a href="hotkeys.html">Hotkeys</a></li>
+		</ul>
+		<hr>
+		<ul class="nav">
+			<li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+			<li><a href="tag_mapping.html">Tag fields mapping</a></li>
+			<li><a href="tag_versions.html">Tags</a></li>
+  	</ul>
+		<hr>
+		<ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+      <div class="cont">
+		<h2>Scripting</h2>
+        <p>
+			Tagscanner has built-in scripting engine which allows you to make advanced things on any text output.
+			The syntax was inspired from <a rel="nofollow" href="http://wiki.hydrogenaudio.org/index.php?title=Foobar2000:Titleformat_Reference">Foobar2000's titleformat</a>.
+			<br>
+			Functions start with a dollar sign and end with an arguments enclosed in parentheses (e.g. $lower(...)).
+		</p>
+		<p>
+			Functions and <a href="tag_list.html">placeholders</a> provide you with rich abilities to beautify tags and filenames.
+		</p>
+
+        <div class="msg">Put the single quote around reserved characters % , $ , [ , ] , ( , ) if you want to use them directly.</div>
+
+        <table width="96%" align="center" class="list2">
+          <tr class="head">
+            <td colspan="2" >String functions</td>
+          </tr>
+					<tr>
+            <td class="bold">[...]</td>
+            <td>Displays contents inside brackets when at least one placeholder not empty</td>
+          </tr>
+          <tr>
+            <td class="bold">$lower(x)</td>
+            <td>Returns X in lowercase.</td>
+          </tr>
+          <tr>
+            <td class="bold">$upper(x)</td>
+            <td>Returns X in uppercase.</td>
+          </tr>
+          <tr>
+            <td class="bold">$caps(x)</td>
+            <td>Converts first letter in every word of X to uppercase, and all other letters to lowercase, e.g. “blah BLAH” ⇒ “Blah Blah”.</td>
+          </tr>
+          <tr>
+            <td class="bold">$caps2(x)</td>
+            <td>Converts first letter in every word of X to uppercase, and all other letters to lowercase, ignoring uppercase letters e.g. “blah BLAH” ⇒ “Blah BLAH”.</td>
+          </tr>
+          <tr>
+            <td class="bold">$if(x,a,b)</td>
+            <td>If X not empty, executes/displays A, otherwise executes/displays B. </td>
+          </tr>
+          <tr>
+            <td class="bold">$if2(x1,x2,x3,...)</td>
+            <td>Returns first non-empty argument. </td>
+          </tr>
+          <tr>
+            <td class="bold">$left(x,n)</td>
+            <td>Returns first N characters from X. </td>
+          </tr>
+          <tr>
+            <td class="bold">$right(x,n)</td>
+            <td>Returns last N characters from X. </td>
+          </tr>
+          <tr>
+            <td class="bold">$cut(x,n)</td>
+            <td>Truncates X on N characters. </td>
+          </tr>
+          <tr>
+            <td class="bold">$trim(x,c)</td>
+            <td>Trims all leading and trailing whitespaces from X. You can set optional parameter C with list of chars to remove.</td>
+          </tr>
+		  <tr>
+            <td class="bold">$trimleft(x,c), $trimright(x,c)</td>
+            <td>Trims all leading/trailing whitespaces from X. You can set optional parameter C with list of chars to remove.</td>
+          </tr>
+          <tr>
+            <td class="bold">$padleft(x,n,c), $padright(x,n,c)</td>
+            <td>Pads X with C character up to N characters. C setted up to space by default.</td>
+          <tr>
+            <td class="bold">$len(x)</td>
+            <td>Returns number of characters in X.</td>
+          </tr>
+          <tr>
+            <td class="bold">$strpos(x,y)</td>
+            <td>Returns position of Y in X.</td>
+          </tr>
+          <tr>
+            <td class="bold">$substr(a,x,y)</td>
+            <td>Returns substring of string A, starting from X-th character and ending at Y-th character.</td>
+          </tr>
+          <tr>
+            <td class="bold">$insert(a,b,n)</td>
+            <td>Inserts string B into string A after N characters.</td>
+          </tr>
+          <tr>
+            <td class="bold">$getpart(x,n,c)</td>
+            <td>Returns N-th part of string X splited by C character. C setted up to space by default.</td>
+          </tr>
+		  <tr>
+            <td class="bold">$reverse(x)</td>
+            <td>Returns X in reverse order.</td>
+          </tr>
+          <tr>
+            <td class="bold">$char(x)</td>
+            <td>Returns unicode character number X.</td>
+          </tr>		
+          <tr>
+            <td class="bold">$ansi(x)</td>
+            <td>Returns X with all characters not present in current system codepage replaced with closest matches</td>
+          </tr>
+          <tr>
+            <td class="bold">$num(x,n)</td>
+            <td>Displays X formatted with zeros up to N characters.  </td>
+          </tr>
+					<tr>
+            <td class="bold">$name(field)</td>
+            <td>Returns localized FIELD name </td>
+          </tr>
+					<tr>
+            <td class="bold">$replace(x,from,to)</td>
+            <td>Replaces all occurrences of string FROM in string X with string TO. </td>
+          </tr>
+          <tr>
+            <td class="bold">$cutmix(x)</td>
+            <td>Removes mix/cover part in parentheses from X</td>
+          </tr>
+          <tr>
+            <td class="bold">$stripprefix(x)</td>
+            <td>Removes &#34;A&#34; and &#34;The&#34; prefixes from X.</td>
+          </tr>
+          <tr>
+            <td class="bold">$swapprefix(x)</td>
+            <td>Moves &#34;A&#34; and &#34;The&#34; prefixes to the end of X.</td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Boolean functions </td>
+          </tr>
+          <tr>
+            <td class="bold">$equal(x,y)</td>
+            <td>Returns true, if X equals Y. (case insensitive) </td>
+          </tr>
+          <tr>
+            <td class="bold">$nequal(x,y)</td>
+            <td>Returns true, if X is not equal Y. (case insensitive) </td>
+          </tr>
+          <tr>
+            <td class="bold">$and(x,y)</td>
+            <td>Returns true, if both X and Y are not empty. </td>
+          </tr>
+          <tr>
+            <td class="bold">$or(x,y)</td>
+            <td>Returns true, if either X or Y is not empty. </td>
+          </tr>
+          <tr>
+            <td class="bold">$not(x)</td>
+            <td>Returns true, if X is empty. </td>
+          </tr>
+          <tr>
+            <td class="bold">$greater(x,y)</td>
+            <td>Returns true, if X is greater than Y.</td>
+          </tr>
+          <tr>
+            <td class="bold">$longer(x,y)</td>
+            <td>Returns true, if X is longer than Y.</td>
+          </tr>
+          <tr>
+            <td class="bold">$isnumber(x)</td>
+            <td>Returns true, if X is number.</td>
+          </tr>
+          <tr>
+            <td class="bold">$in(x,y)</td>
+            <td>Returns true, if X contains Y.</td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"> Arithmetic functions </td>
+          </tr>
+          <tr>
+            <td class="bold">$add(x,y)</td>
+            <td>Add Y to X.</td>
+          </tr>
+          <tr>
+            <td class="bold">$sub(x,y)</td>
+            <td>Subtracts Y from X. </td>
+          </tr>
+          <tr>
+            <td class="bold">$div(x,y)</td>
+            <td>Divides X by Y.</td>
+          </tr>
+          <tr>
+            <td class="bold">$min(x,y)</td>
+            <td>Returns minimum value.</td>
+          </tr>
+          <tr>
+            <td class="bold">$max(x,y)</td>
+            <td>Returns maximum value.</td>
+          </tr>
+          <tr>
+            <td class="bold">$round(x)</td>
+            <td>Returns rounded x.</td>
+          </tr>
+          <tr>
+            <td class="bold">$mod(x,y)</td>
+            <td>Returns the remainder of X divided by Y.</td>
+          </tr>
+          <tr>
+            <td class="bold">$mul(x,y)</td>
+            <td>Multiplies X by Y.</td>
+          </tr>
+        </table>
+
+		<p class="footer">Copyright 1999-2023 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+      </div>
+</body>
+</html>

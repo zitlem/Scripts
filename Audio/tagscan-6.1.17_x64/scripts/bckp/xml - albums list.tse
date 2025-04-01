@@ -1,0 +1,54 @@
+﻿# Tagscanner export script
+
+$file_name TrackList.xml
+$file_notes XML file with full information
+$file_encoding utf-8
+$file_writebom 0
+$file_ishtml 1
+
+$document_open
+<?xml version="1.0" encoding="utf-8"?>
+<filelist>
+	<root>%workpath%</root>
+	<totalfiles>%_totalfiles%</totalfiles>
+	<totalsize>%_totalsize%</totalsize>
+	<totallength>%_totallength%</totallength>
+	<date>%_now%</date>
+	<generator>%_version%</generator>
+$select %albumartist%,0
+	<artist>
+		<name>%albumartist%</name>
+		<files>%_totalfiles%</files>
+		<size>%_totalsize%</size>
+		<length>%_totallength%</length>
+$select %year%-%album%,0
+		<album>
+			<title>%album%</title>
+			<files>%_totalfiles%</files>
+			<size>%_totalsize%</size>
+			<length>%_totallength%</length>
+			<genre>%genre%</genre>
+			<year>%year%</year>
+			<path>%filepath%</path>
+$select %fullfilenameext%,0
+			<track>
+				<tracknumber>%track%</tracknumber>
+				<title>%title%</title>
+				<comment>%comment%</comment>
+				<length>%_length%</length>
+				<codec>%_codec%</codec>
+				<bitrate>%_bitrate%</bitrate>
+				<mode>%_channels%</mode>
+				<samplerate>%_samplerate%</samplerate>
+				<tags>%_tagtype%</tags>
+				<filename>%fullfilenameext%</filename>
+				<filedate>%_filedate%</filedate>
+				<size>%_filesize%</size>
+			</track>
+$endselect
+		</album>
+$endselect
+	</artist>
+$endselect
+</filelist>
+$document_close

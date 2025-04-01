@@ -1,0 +1,1119 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Version history</title>
+  <link type="text/css" rel="stylesheet" href="st.css" />
+</head>
+
+<body>
+  <div class="lmenu">
+    <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="getting_started.html">Getting started</a></li>
+      <ul class="nav">
+        <li><a href="mod_rename.html">Rename files</a></li>
+        <li><a href="mod_edit.html">Edit tags</a></li>
+        <li><a href="mod_online.html">Search online</a></li>
+        <li><a href="mod_generate.html">Auto-fill tags</a></li>
+        <li><a href="mod_export.html">Export</a></li>
+        <li><a href="mod_transform.html">Transformations</a></li>
+        <li><a href="commands.html">Commands</a></li>
+      </ul>
+      <li><a href="fileview.html">File view</a></li>
+      <li><a href="hotkeys.html">Hotkeys</a></li>
+    </ul>
+    <hr>
+    <ul class="nav">
+      <li><a href="tag_script.html">Scripting</a></li>
+      <li><a href="tag_list.html">Placeholders</a></li>
+      <li><a href="tag_mapping.html">Tag fields mapping</a></li>
+      <li><a href="tag_versions.html">Tags</a></li>
+    </ul>
+    <hr>
+    <ul class="nav">
+      <li><a href="lic.html">License</a></li>
+      <li><a href="sysreq.html">System requirements</a></li>
+      <li><a href="history.html">Version history</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+  <div class="cont">
+    <h2>Version history</h2>
+    <h4>6.1.17 (2024-04-11)</h4>
+    <ul>
+      <li>New: Unlock all fields button now can toggle state of all fields</li>
+      <li>Improved grouping and sorting of files with mix of local and ansi chars</li>
+      <li>Improved multiline fields editing in advanced editor</li>
+      <li>Improved protection against malformed OGG files</li>
+      <li>Fixed: Access violation error after remove fields in advanced editor</li>
+    </ul>
+    <h4>6.1.16 (2023-11-02)</h4>
+    <ul>
+      <li>New: Now you can toggle size of list of placeholders</li>
+      <li>New: function $reverse(x)</li>
+      <li>Improved: function $trim(x,c) now has optional parameter with list of character to remove and additional versions $trimleft and $trimright</li>
+      <li>Improved: Adjusted layout of web search results since 6.1.15</li>
+      <li>Fixed: Auto-hided taskbar can't popup while program window maximized</li>
+      <li>Fixed: Resize cover didn't work as intended is some rare cases</li>
+      <li>Updated default export scripts</li>
+      <li>Updated support for OPUS format</li>
+      <li>Translation: Slovenian</li>
+    </ul>
+    <h4>6.1.15 (2023-04-19)</h4>
+    <ul>
+      <li>Improved: Increased default interface font and size of all input fields</li>
+      <li>Improved: Support tag editig of files with very long names on network shares</li>
+      <li>Improved: Protection against corruption of malformed WAV files</li>
+      <li>Improved: On Windows10 and later program now use native border drawing</li>
+      <li>Fixed: Rare problem with name conflict while renaming folders if only case changing</li>
+      <li>Changed: Lyrics are now saved to LYRICS instead UNSYNCEDLYRICS for APEv2 tags to improve compatibility </li>
+      <li>Updated FLAC support</li>
+    </ul>
+    <h4>6.1.14 (2022-11-09)</h4>
+    <ul>
+      <li>New program icon (thanks to Marcio de Andrade)</li>
+      <li>New placeholder %_length_msec% for track duration in milliseconds</li>
+      <li>Improved formatting of tracks duration</li>
+      <li>Fixed creation of export files while transformations activated</li>
+      <li>Fixed calculation of cover dimensions for OGG and OPUS</li>
+      <li>Fixed work with network shares (SMB)</li>
+      <li>Fixed maximazing of program window on some multiscreen setups</li>
+      <li>Updated playback engine</li>
+      <li>Updated WebP covers support</li>
+      <li>Translation: Italian, German, Hungarian</li>
+    </ul>
+    <h4>6.1.13 (2022-05-07)</h4>
+    <ul>
+      <li>New: List of possible field values from selected files for Advanced editor</li>
+      <li>Improved: Support for very long filenames</li>
+      <li>Improved: Support for dashed mp4 files</li>
+      <li>Improved: Scrolling multiline fields in tag editor with mouse wheel</li>
+      <li>Updated some dialogs, removed unnecessary autocompletion</li>
+      <li>Updated FLAC support</li>
+      <li>Translation: Italian, Czech</li>
+    </ul>
+    <h4>6.1.12 (2021-12-12)</h4>
+    <ul>
+      <li>Improved: Added %_filedate_iso% and %_filedate_create_iso% placeholders to make possible to sort filelist
+        correctly independent of system regional settings</li>
+      <li>Improved: Preview mode in Generate tab now sort columns according your scheme</li>
+      <li>Improved: Ability to quick select/unselect all imported fields in web options</li>
+      <li>Fixed: Reading of UTF-8 encoded files on generate tag from file</li>
+      <li>Updated MP4 support</li>
+      <li>Unified separators for multiple values fields</li>
+      <li>Program are now check on exit if main config file is read only</li>
+    </ul>
+    <h4>6.1.10 (2021-09-08)</h4>
+    <ul>
+      <li>New: Now you can save your filtering patterns for list of files</li>
+      <li>New: Special placeholder for parsing time information %_SCAN_TIME% to find potential problems with files
+        reading</li>
+      <li>Improved: Processing of field names contained hyphens</li>
+      <li>Changed: Progam now reset file selection after playback stop</li>
+      <li>Changed: Play button now start playback of first selected file instead first listed</li>
+      <li>Updated playback engine</li>
+      <li>Translation: Latvian</li>
+    </ul>
+    <h4>6.1.9 (2021-06-03)</h4>
+    <ul>
+      <li>Improve visual appearance on systems with 200% and higher scaling</li>
+      <li>Additional detection and indication of non-native tag formats for FLAC, MP4 and WMA files</li>
+      <li>Fixed: Covers didn't resized to selected format while used Import covers wizard</li>
+      <li>Fixed: Size of covers didn't changed for WebP</li>
+      <li>Fixed: Work with WAV and AIFF files larger than 2GB</li>
+      <li>Changed: Filenames no longer affected by Transformations rules on Tag generation from filename module</li>
+      <li>Updated MP4 support</li>
+    </ul>
+    <h4>6.1.8 (2021-04-21)</h4>
+    <ul>
+      <li>New: Support WebP image format for covers</li>
+      <li>New: Scripting function $insert(a,b,n), $getpart(x,n,c)</li>
+      <li>Fixed: Incorrect codepage error on some AIFF files</li>
+      <li>Updated some examples in help</li>
+      <li>Translation: Finnish</li>
+    </ul>
+    <h4>6.1.7 (2021-01-12)</h4>
+    <ul>
+      <li>New: Special placeholders for extended technical info from FLAC: %_flac_md5% and MPEG: %_mpeg_copyright%,
+        %_mpeg_protectection%, %_mpeg_original%, %_mpeg_private%, %_mpeg_emphasis%</li>
+      <li>Improved: Speed up reading of tags from huge files</li>
+      <li>Improved: Importing of titles for each media from Musicbrainz releases</li>
+      <li>Changed: Scripting functions $greater and $longer no longer return true for equal values</li>
+      <li>Fixed: Reading of ID3 chunks situated in the end of some lossless files larger than 4GB</li>
+      <li>Fixed: Wrong selection of now played file when remove some files from list</li>
+    </ul>
+    <h4>6.1.6 (2020-10-01)</h4>
+    <ul>
+      <li>Freedb lookups switched to gnudb.org by default</li>
+      <li>Improved: Reading of rating atom [rate] from mpe4 metadata</li>
+      <li>Improved: Now you can sort replacement rules automatically with Transformations editor</li>
+      <li>Improved: Added more choices for JPEG files types when inserting covers</li>
+      <li>Fixed: New fields didn't added to Vorbis tag in some cases since 6.1.0</li>
+      <li>Fixed: User fields order change in tag editor</li>
+      <li>List of available fields was expanded</li>
+      <li>Updated WavPack support</li>
+    </ul>
+    <h4>6.1.5 (2020-07-01)</h4>
+    <ul>
+      <li>Improved: MusicBrainz lookups now import full set of MBIDs to better integration with media managers and also
+        have more relevant results</li>
+      <li>Fixed: Renaming of files with patterns with leading backslash</li>
+      <li>Fixed: %_bitspersample% placeholder not filled correctly in Export scripts</li>
+      <li>Fixed: Filtering didn't work in some cases</li>
+      <li>Fixed: Errors on creating user field containing spaces</li>
+      <li>Fixed: Filelist not updated correctly on undoing of renaming</li>
+      <li>Changed: Publisher's catalog number from web results now saved to CATALOGNUMBER field instead ISRC</li>
+      <li>Updated Export scripts to avoid possible problems with non-latin texts outside placeholders</li>
+      <li>Translation: Turkish, Bulgarian </li>
+    </ul>
+    <h4>6.1.4 (2020-04-17)</h4>
+    <ul>
+      <li>Improved: Now you can use up to 10 nested scripting functions</li>
+      <li>Fixed: In some cases program removes trailing dots from filenames</li>
+      <li>Fixed: Rare problems with scripting engine and values contained $ symbol</li>
+      <li>Changed: Disc number no longer setted up to 1 for Discogs releases without separated medias</li>
+      <li>Improved navigation with keyboard in some parts of interface</li>
+      <li>Translation: Bulgarian</li>
+    </ul>
+    <h4>6.1.3 (2020-03-05)</h4>
+    <ul>
+      <li>New: Number of elements in each group now displayed on group's title bar</li>
+      <li>New: Scripting function $substr(x,a,b)</li>
+      <li>Improved: Internal player now considers if the filelist is filtered</li>
+      <li>Improved: Editor now preserve fields values while toggling Transformations</li>
+      <li>Improved: Additional checks on corrupted FLAC files to prevent hanging</li>
+      <li>Changed: ALBUMARTIST placeholder no longer use ARTIST value if own value is empty</li>
+      <li>Updated export scripts</li>
+      <li>Updated playback engine</li>
+      <li>Translation: German, Italian</li>
+    </ul>
+    <h4>6.1.2 (2019-11-12)</h4>
+    <ul>
+      <li>New: $padleft(x,y) and $padright(x,y) functions</li>
+      <li>Improved: 64-bit installer now auto-backup scripts from 32-bit installation before upgrade</li>
+      <li>Improved: Interface now looks and feel more accurate on 175% and higher scaling</li>
+      <li>Changed: After refactoring of scripting engine to speed up processing was reverted back PCRE based regular
+        expression engine to take access to full power of string processing</li>
+      <li>Fixed: Can't update tag while file playing</li>
+      <li>Fixed: Tracks numbering from Musibrainz lookups</li>
+      <li>Fixed: Processing of export scripts with html tags</li>
+      <li>Fixed: In some cases program maked copy of file instead renaming</li>
+      <li>Translation: Portuguese (Brazil), Italian</li>
+    </ul>
+    <h4>6.1.1 (2019-10-24)</h4>
+    <ul>
+      <li>Fixed: 64-bit version didn't launch on systems with increased dpi</li>
+      <li>Fixed: Hanging of 64-bit version while playback music</li>
+      <li>Fixed: Some visual issues in advanced editor</li>
+      <li>Fixed: Access violation error on export in some cases</li>
+      <li>Translation: Portuguese (Portugal)</li>
+    </ul>
+    <h4>6.1.0 (2019-10-18)</h4>
+    <ul>
+      <li> New: Dark mode</li>
+      <li> New: 64-bit version</li>
+      <li> New: Customizable list of extended fields in editor</li>
+      <li> New: Predefined folder for covers</li>
+      <li> New: Ability to get params for web requests automatically</li>
+      <li> New: Now you can see total number of tracks in release for online lookups</li>
+      <li> Improved: Format value command nows has own button on main toolbar and works from any modes </li>
+      <li> Improved: Import lyrics wizard nows remember options </li>
+      <li> Improved: Ability to use own musicbrainz server</li>
+      <li> Improved: New hotkey Ctrl+W to send web search request</li>
+      <li> Improved: Scalable interface of Transformations editor</li>
+      <li> Improved: Vorbis comments compatibility with JRiver</li>
+      <li> Improved: Switched to new fast internal RegEx engine</li>
+      <li> Fixed: Access violation error on multilevel transformations with nulled fields</li>
+      <li> Fixed: Processing of track numbers for vinyl releases from Discogs</li>
+    </ul>
+    <h4>6.0.35 (2019-05-24)</h4>
+    <ul>
+      <li>Improved layout of some interface elements for hiDpi modes</li>
+      <li>Fixed: Memory leak while tagging OGG files</li>
+      <li>Fixed: Support for WMA files</li>
+      <li>Updated OpenSSL libs</li>
+      <li>Translation: German</li>
+    </ul>
+    <h4>6.0.34 (2019-03-20)</h4>
+    <ul>
+      <li>Improved: 'Remixed by' internal field are now may be mapped to REMIXEDBY or MIXARTIST tag field</li>
+      <li>Improved: 'Open file location' command works more clearly and don't create additional explorer.exe instances
+      </li>
+      <li>Fixed: Calculation of duration for files with several ID3v2 tags</li>
+      <li>Fixed: Not all placeholders available in Export scripts</li>
+      <li>Fixed: Case change feature failed on some locales</li>
+      <li>Translation: Bulgarian</li>
+    </ul>
+    <h4>6.0.33 (2019-02-06)</h4>
+    <ul>
+      <li>Starting work to make program more friendly for screen readers</li>
+      <li>Improved: Autonumbering wizard are now saves settings</li>
+      <li>Improved: MEDIATYPE field now imported from online services</li>
+      <li>Improved: All previews are now updated in real time on Transformations selection</li>
+      <li>Fixed: Memory leak in scripting engine cause "Out of memory" error</li>
+      <li>Updated playbak engine</li>
+      <li>Translation: Japanese, Bulgarian, German, Norwegian, Czech</li>
+    </ul>
+    <h4>6.0.32 (2018-11-14)</h4>
+    <ul>
+      <li>Transformation with Format value now may be used to generate fields with predefined value</li>
+      <li>New function: ansi(x) returns X with all characters normalized with system codepage</li>
+      <li>Removed tracktype.org service import - because it's not work anymore</li>
+      <li>Added vgmdb.net (Video Games Music Database) to list of servers for FreeDB/CDDB technology</li>
+      <li>Updated support for DSDIFF format</li>
+      <li>Translation: Chinese Simplified</li>
+    </ul>
+    <h4>6.0.31 (2018-09-25)</h4>
+    <ul>
+      <li>Additional tweaks for Discogs service</li>
+      <li>Added incremental search by all tag fields on main list and list of transformations</li>
+      <li>Default ID3v1 genres list expanded by almost 50 new genres</li>
+      <li>Improved: Reading of WAV files with ID3v2 chunk identifier in upper case</li>
+      <li>Translation: Chinese Traditional</li>
+    </ul>
+    <h4>6.0.30 (2018-07-19)</h4>
+    <ul>
+      <li>Updated support for Discogs to reflect latest changes in API for multiple artists tracks</li>
+      <li>Updated support for MusicBrainz to work with updated search engine</li>
+      <li>Additional protection logic for fragmented mpeg4 files</li>
+      <li>Program no longer test on Windows XP/2003, but should work on these systems</li>
+      <li>Translation: Portuguese (Brazil)</li>
+    </ul>
+    <h4>6.0.29 (2018-06-20)</h4>
+    <ul>
+      <li>New placeholders: %_cover_size% , %_cover_width% , %_cover_height%</li>
+      <li>New function: if2(x1,x2,x3,...) returns first non-empty argument</li>
+      <li>Improved: Bypass of malformed WAV files</li>
+      <li>Improved: Additional information for classical music from Discogs</li>
+      <li>Improved: Adittional processing of subtracks from Discogs</li>
+      <li>Additional checks for names conflict on folder renaming</li>
+    </ul>
+    <h4>6.0.28 (2018-04-28)</h4>
+    <ul>
+      <li>Updated support for Discogs service</li>
+      <li>New: Format value feature are now available in transformations</li>
+      <li>New: Now you can automatically override any embedded cover with your file</li>
+      <li>New functions: $min(x,y), $max(x,y), $round(x)</li>
+      <li>Improved: Very long file paths support for tag editing</li>
+      <li>Improved: Picture column now shows filename of external cover (if available) if embedded cover is empty</li>
+      <li>Changed: Metadata inside WAV LIST INFO chunks now saved with Windows default (ANSI) encoding</li>
+      <li>Translation: Bulgarian</li>
+    </ul>
+    <h4>6.0.27 (2018-03-06)</h4>
+    <ul>
+      <li>Updated support for CoverArtArchive base which used by Musicbrainz service</li>
+      <li>New function: $in(x,y) returns true, if X contains Y</li>
+      <li>Fixed: Unable to clear Album Artist field inside Vorbis in some cases</li>
+      <li>Changed: $strpos function now case insensitive</li>
+      <li>Updated playback engine</li>
+    </ul>
+    <h4>6.0.26 (2018-01-11)</h4>
+    <ul>
+      <li>Improved: Dramatically decreased memory consumption for undo changes feature</li>
+      <li>Improved: Player are now may switch output device on-the-fly</li>
+      <li>Fixed: Can't undoing cover resizing</li>
+      <li>Fixed: Manual sorting of text replacement rules</li>
+      <li>Fixed: Paste tag into multiple files</li>
+      <li>Updated support for MPEG to improve detection of Lame encoded files</li>
+      <li>Translation: Japanese, Bulgarian</li>
+    </ul>
+    <h4>6.0.25 (2017-11-17)</h4>
+    <ul>
+      <li>New: Online results window are now shows track length if available</li>
+      <li>Improved: Stability while saving tags into multiple huge files</li>
+      <li>Improved: Now you can paste single tag from buffer to all selected files</li>
+      <li>Improved: Playback loop control</li>
+      <li>Improved: Fast forward and rewind while playing</li>
+      <li>Improved: Program are now import genre info from Discogs to CONTENTGROUP field</li>
+      <li>Improved: Additional logic on parsing Vorbis comments fields from foobar2000</li>
+      <li>Updated MP4 metadata support</li>
+      <li>Changed: Program now use 'xxx' language marker for ID3v2 frame USLT to prevent problems with reading lyrics in
+        some players</li>
+      <li>Translation: Bulgarian, Serbian (Latin)</li>
+    </ul>
+    <h4>6.0.23 (2017-09-14)</h4>
+    <ul>
+      <li>New keyboard shortcut Ctrl+Shift+R and toolbar button for Rename folder by tag wizard</li>
+      <li>New ability to load and save user-defined genres from external files</li>
+      <li>Support for reading of ID3v2 UFID frame</li>
+      <li>Progam now are remember last used playlist name</li>
+      <li>Most of buttons on toolbars now may change their state depending on selection </li>
+      <li>Fixed: Can't remove metadata from DFF files</li>
+      <li>Fixed: Program crashes if files structure change outside interface</li>
+      <li>Fixed: Saving of some ID3v2 frames with incorrect encoding</li>
+      <li>Translation: Portuguese (Brazil), Persian, Chinese Simplified</li>
+    </ul>
+    <h4>6.0.22 (2017-07-13)</h4>
+    <ul>
+      <li>Amazon removed from list of supported web services after Amazon canceled project's accounts</li>
+      <li>Now all lists with user-defined templates can store up to 50 values</li>
+      <li>Updated support for OPUS</li>
+      <li>Translation: Bulgarian, German</li>
+    </ul>
+    <h4>6.0.21 (2017-05-11)</h4>
+    <ul>
+      <li>New: Support for DSDIFF files (.DFF)</li>
+      <li>New: Support for new ID3v2 and MP4 tag fields from iTunes</li>
+      <li>New scripting function isnumber(x)</li>
+      <li>Ability to rename field in advanced tag editor</li>
+      <li>Fixed possible FLAC files corruption for files without padding blocks</li>
+      <li>Temporary disabled lookups on non-US Amazon sites</li>
+      <li>Translation: Japanese, Italian, Finnish, Catalan</li>
+    </ul>
+    <h4>6.0.20 (2017-03-09)</h4>
+    <ul>
+      <li>New: Feature to quick formatting of field value in Editor</li>
+      <li>New: Now you can exclude field from processing using a minus sign before the name</li>
+      <li>Improved: Regular Expressions now works with multiline fields</li>
+      <li>Fixed: Reading of ID3v2 fields INVOLVEDPEOPLE and MUSICIANCREDITS</li>
+      <li>Updated support for FLAC and OPUS</li>
+      <li>Translation: Bulgarian</li>
+    </ul>
+    <h4>6.0.19 (2017-01-18)</h4>
+    <ul>
+      <li>New functions: $swapprefix, $stripprefix</li>
+      <li>Improved: Recognition of APE tags</li>
+      <li>Fixed: Handling of templates for Rename folder by tag feature</li>
+      <li>Fixed: Incorrect sorting of filelist by user-defined columns</li>
+      <li>Changed: APEv2 tag now default for TTA-files</li>
+      <li>Changed: Now when you run the program it opens file from passed arguments, rather than scans folder in which
+        it placed</li>
+      <li>Updated support for WavPack 5.0 format</li>
+      <li>Translation: Turkish</li>
+    </ul>
+    <h4>6.0.18 (2016-12-05)</h4>
+    <ul>
+      <li>Improved: Handling of non-unique named text frames from ID3v2 tags (more compatible)</li>
+      <li>Improved: Accelerated handling of covers for OGG and OPUS files</li>
+      <li>New placeholder %_bitrate_type% for VBR or CBR indication (if available) </li>
+      <li>Fixed: Work with pictures descriptions in editor</li>
+      <li>Changed: Old COVERART fields from Vorbis Comments will be converted to the new METADATA_BLOCK_PICTURE field
+        while saving</li>
+      <li>Changed: ENCODER field from Vorbis Comments no longer mapped to ENCODEDBY to prevent possible problems with
+        MQA encoded files</li>
+    </ul>
+    <h4>6.0.17 (2016-11-07)</h4>
+    <ul>
+      <li>Fixed: Scaling on hiDPI modes since 6.0.16</li>
+      <li>Updated MPEG4 support </li>
+      <li>Improved Discogs service support </li>
+      <li>New function $char(x) to get unicode character by its code</li>
+    </ul>
+    <h4>6.0.16 (2016-10-20)</h4>
+    <ul>
+      <li>Improved: Program now handles malformed FLAC files and tries to fix their while saving</li>
+      <li>Improved: Placeholders and functions are now may be used for filtering </li>
+      <li>Improved: Autonumbering wizard automatically recognize scheme of formatting from start value</li>
+      <li>Arithmetic functions: $add(x,y) $sub(x,y) $div(x,y) $mod(x,y) $mul(x,y)</li>
+      <li>Boolean functions: $greater(x,y) $longer(x,y)</li>
+      <li>Fixed: Initialization of predefined genres list in portable version</li>
+      <li>Translation: Catalan, Greek</li>
+    </ul>
+    <h4>6.0.15 (2016-09-12)</h4>
+    <ul>
+      <li>New: Autonumbering of discs based on groups</li>
+      <li>New scripting function $cutmix(x) to remove mix/cover part in parentheses from string </li>
+      <li>Improved behavior of Rename folder by tag function</li>
+      <li>Improved interaction with MusicBrainz service</li>
+      <li>Improved: Editor now remembers state of folded blocks</li>
+      <li>Fixed: Initialization of proxy options </li>
+      <li>Fixed: Reading of export scripts in some cases</li>
+      <li>Switch for Track counter in editor reverted back (it was useful in some cases)</li>
+      <li>Translation: Chinese Simplified</li>
+    </ul>
+    <h4>6.0.14 (2016-07-14)</h4>
+    <ul>
+      <li>Find duplicates function returns with new features</li>
+      <li>Now you can customize list of pre-defined genres</li>
+      <li>Support for <a href="http://www.regular-expressions.info/replacecase.html">Replacement Text Case
+          Conversion</a> of Regular expressions</li>
+      <li>New indication for file access problems</li>
+      <li>Updated some default options</li>
+      <li>Translation: Japanese, Turkish, Spanish</li>
+    </ul>
+    <h4>6.0.12 (2016-06-15)</h4>
+    <ul>
+      <li>New: Filelist filtering feature are now allows to make searching with exact case, whole words and regular
+        expressions</li>
+      <li>Improved: User-defined columns now have text alignment property and may be deleted separately</li>
+      <li>Improved: Regular expressions now tested for errors to avoid program hang</li>
+      <li>Fixed: ID3v2 TDAT frame didn't removed on save</li>
+      <li>Fixed: Covers removed from OGG files after running some tag changing functions</li>
+      <li>Transformations configurator was simplified</li>
+      <li>More smooth work on hiDPI modes</li>
+      <li>Cleaned up content of translation files</li>
+      <li>Translation: French, Czech</li>
+    </ul>
+    <h4>6.0.11 (2016-06-01)</h4>
+    <ul>
+      <li>New: Ability to use own patterns in filelist columns</li>
+      <li>Improved: Convert codeapge feature now have option to change entirely tag</li>
+      <li>Fixed: Error on Copy/Paste tag data in advanced tag editor</li>
+      <li>Fixed: Processing of empty values with scripting functions</li>
+      <li>Changed: ID3v2.3 TYER/TDAT frames now merged into one YEAR field formatted as YYYY-MM-DD</li>
+      <li>Translation: Spanish</li>
+    </ul>
+    <h4>6.0.10 (2016-05-22)</h4>
+    <ul>
+      <li>Updated support for ALAC format</li>
+      <li>Fixed: Escaping of some chars in scripting functions</li>
+      <li>Fixed: Removing of tag fields with Advanced tag editor</li>
+      <li>Fixed: Proxy options saving</li>
+      <li>Fixed: Unicode options processing for ID3v2 tags</li>
+      <li>Changed logic of WMA tags reading/saving</li>
+      <li>Translation: Polish, Greek, Japanese, Swedish</li>
+    </ul>
+    <h4>6.0.8 (2016-04-26)</h4>
+    <ul>
+      <li>New: Wizard to mass import of lyrics from files</li>
+      <li>Fixed: Album title trimming from FreeDB</li>
+      <li>Updated Discogs cleanup script</li>
+    </ul>
+    <h4>6.0.7 (2016-04-19)</h4>
+    <ul>
+      <li>New: Placeholder %_filedate_create% returns the specified file creation date </li>
+      <li>Improved: Handling of corrupted FLAC files</li>
+      <li>Fixed: Support of FreeDB service since 6th version</li>
+    </ul>
+    <h4>6.0.6 (2016-03-24)</h4>
+    <ul>
+      <li>New: Helper panel with list of available placeholders in dialogs </li>
+      <li>New: Logic functions $not, $and, $or</li>
+      <li>Improved: Handling of M4A tag “Conductor”</li>
+      <li>Fixed: Usage of patterns in export/import covers dialogs</li>
+      <li>Changed: Unknown metadata blocks inside MP4 files are now preserved</li>
+      <li>Placeholders reorganized</li>
+      <li>Updated some icons for hiDPI modes</li>
+      <li>Updated sound engine and plugins</li>
+      <li>Translation: Chinese Simplified, Persian</li>
+    </ul>
+    <h4>6.0.5 (2016-03-10)</h4>
+    <ul>
+      <li>Improved: More smooth work with groups in filelist</li>
+      <li>Improved: Draging files to Log window </li>
+      <li>Improved: Support for latest changes in iTunes</li>
+      <li>Improved: Ability to sort user-defined genres</li>
+      <li>Fixed: Mouse scrolling in any part of interface on windows10</li>
+      <li>Fixed: Forming of LIST INFO chunk in WAV files</li>
+      <li>Translation: Portuguese (Brazil), Chinese Simplified</li>
+    </ul>
+    <h4>6.0.4 (2016-02-23)</h4>
+    <ul>
+      <li>New: Picture column now shows size of data in addition to image dimensions</li>
+      <li>Improved: Recovering metadata from corrupted AIFF files writed by iTunes</li>
+      <li>Fixed: Updating of generators configuration while migrating from 5.1 to 6</li>
+      <li>Fixed: Filtering of fields from online import</li>
+      <li>Fixed: FLAC, WAV, MP4 support since 6.0.3</li>
+      <li>Updated internal scripting engine</li>
+      <li>Updated support for OPUS</li>
+      <li>Changed: Covers resize function does not enlarge small images anymore</li>
+      <li>Changed: Transform scripting files are now updated on disc as needed</li>
+      <li>Translation: Portuguese (Portugal)</li>
+    </ul>
+    <h4>6.0.3 (2016-02-10)</h4>
+    <ul>
+      <li>New network core with secure connections support. Required for upcoming changes on Discogs</li>
+      <li>New option for padding zone reduction inside FLAC files</li>
+      <li>New: Ability to drag and drop covers from Firefox and Google Chrome</li>
+      <li>Fixed: Scripting functions didn't worked in some cases</li>
+      <li>Fixed: Removing covers from FLAC</li>
+      <li>Changed: Custom fields names case now preserved for ID3v2 tags</li>
+      <li>Changed: ID3v1 tag saving into mp3 files now depend on special option</li>
+      <li>Updated Apple Lossless format support</li>
+      <li>Translation: Ukrainian, Greek, Slovak, Dutch, French</li>
+    </ul>
+    <h4>6.0.1 (2016-01-20)</h4>
+    <ul>
+      <li>Improved: More accurate sorting by picture dimensions</li>
+      <li>Fixed: Program hang on file list shuffle</li>
+      <li>Fixed: Program hang on paths managment</li>
+      <li>Fixed: Custom tag fields removed while saving with standard tag editor</li>
+      <li>Reverted back loading of user templates for foldernames</li>
+      <li>Updated support for AAC</li>
+      <li>Reorganize files feature again handles folders</li>
+    </ul>
+    <h4>6.0.0 (2016-01-15)</h4>
+    <ul>
+      <li>New: Fresh hiDPI friendly interface</li>
+      <li>New: AIFF and WAV tagging support</li>
+      <li>New: Scripting functions</li>
+      <li>New: Ability to load scripts from external files</li>
+      <li>New: Reorganize feature now has two modes Move and Copy</li>
+      <li>New: Placeholder %_bitspersample% for bit depth information (if available)</li>
+      <li>New: Placeholder %_tool% for information about encoding tool (if available)</li>
+      <li>New: Now you can save id3v2.4 tags (2.3 by default)</li>
+      <li>New: Advanced features for sorting and grouping of files including selection of several fields</li>
+      <li>New: Ability to use user-defined columns in list</li>
+      <li>New: Ability to filter filelist by certain fields</li>
+      <li>New: Dialog for tags removing with advanced options</li>
+      <li>New: Advanced mode of tag editor with access to all possible fields and easy creation of user-defined fields
+      </li>
+      <li>New: Dialogs for import/export covers with special features</li>
+      <li>New: Now you can select which fields need to import from online</li>
+      <li>New: Support for Socks proxy</li>
+      <li>New: Support for lookups on Amazon.in (India)</li>
+      <li>New: All program modules reorganized to make program more friendly to new users</li>
+      <li>New: Dialog for autonumbering with advanced options</li>
+      <li>New: Dialog for renaming of folders</li>
+      <li>New: Hotkeys for Copy/Paste tags</li>
+      <li>New: One log for all operations</li>
+      <li>New: Command in filelist menu - Copy filenames</li>
+      <li>Improved: Additional filtering of results from Discogs</li>
+      <li>Improved: Export operation now logs names of created files</li>
+      <li>Improved: Import cover feature now allow not only jpeg files in auto-mode</li>
+      <li>Improved: Autocomplete feature for long dropdown lists</li>
+      <li>Improved: Moving several files at once with arrows or hotkeys</li>
+      <li>Improved: Processing of ID3v2 list frames like TIPL</li>
+      <li>Improved: Processing of iTunes (MP4) mediatype atom</li>
+      <li>Changed: Sorting and grouping now are independent, you can use Auto-grouping mode to get old behavior</li>
+      <li>Changed: Convert codepage function moved from scripts to command in main menu and works more accurate</li>
+      <li>Changed: APEv2 tags now ignored for mp3 files if ID3v2 exist</li>
+      <li>Changed: Tag reading and saving options rethought.</li>
+      <li>Changed: Program switches to the Log window only on Preview operation</li>
+      <li>Changed: Log window now show only affected fields</li>
+      <li>Changed: "Move The" function revised due to recent changes on Discogs</li>
+      <li>Fixed: Reading of ID3v2 tags from files larger than 2GB</li>
+      <li>Optimized memory usage during intensive work</li>
+      <li>Updated support for MusicBrainz</li>
+      <li>Translations: Greek, Polish, Japanese, German, Swedish</li>
+    </ul>
+
+    <h4>5.1.668 (2015-06-15)</h4>
+    <ul>
+      <li>Improved: Reading of ID3v2.3 tags contained frames marked as version 2.2 </li>
+      <li>Fixed: Sometimes program can't delete empty folder after finishing of restructure function</li>
+      <li>Support for Windows 10</li>
+    </ul>
+    <h4>5.1.667 (2015-03-31)</h4>
+    <ul>
+      <li>Improved navigation with keyboard </li>
+      <li>Fixed playlists saving</li>
+      <li>Optimize memory consumption for undo operation</li>
+      <li>Translations: Chinese Simplified</li>
+    </ul>
+    <h4>5.1.665 (2015-02-24)</h4>
+    <ul>
+      <li>Updated Discogs support</li>
+      <li>Improved Discogs cleanup script</li>
+      <li>Fixed problem with locking of taskbar in fullscreen mode</li>
+      <li>Fixed transform sripts changing</li>
+      <li>Translations: Turkish, Japanese</li>
+    </ul>
+    <h4>5.1.663 (2015-02-17)</h4>
+    <ul>
+      <li>New option to preserve file selection after tag saving</li>
+      <li>Increased startup speed with initial folder scanning</li>
+      <li>Fixed some visual issues with old Windows themes</li>
+      <li>Program now remember state of Restructure feature</li>
+      <li>Ability to create list of predefined paths for Restructure feature</li>
+      <li>All dropdown lists now works as conceived by the system </li>
+    </ul>
+    <h4>5.1.661 (2015-01-20)</h4>
+    <ul>
+      <li>Improved: Imprort information about subtracks from Discogs</li>
+      <li>New placeholder %_paramstr% for startup options</li>
+      <li>Simplify updates installation</li>
+    </ul>
+    <h4>5.1.660 (2014-12-22)</h4>
+    <ul>
+      <li>New: Work with Initial Key field requested by DJs and classic music lovers</li>
+      <li>Now you can click on disc title in web results to select/deselect tracks from current disc</li>
+      <li>Support for Snap features on latest Windows</li>
+      <li>Fixed rare problem with using of conditional sections on strings with spanish punctuation</li>
+      <li>Updated Flac support</li>
+      <li>Added ability to playback of Direct Stream Digital format</li>
+    </ul>
+    <h4>5.1.657 (2014-11-09)</h4>
+    <ul>
+      <li>New: Support for tagging of Direct Stream Digital format</li>
+      <li>Fixed: Some input fields was locked since last update</li>
+      <li>More accurate processing of multi-artist releases from Discogs</li>
+      <li>Program now use new select folder dialog for Vista above</li>
+    </ul>
+    <h4>5.1.655 (2014-10-27)</h4>
+    <ul>
+      <li>Updated Discogs support</li>
+      <li>Fixed: extracting of large covers</li>
+      <li>Fixed: reading of some sorts of ID3v2 unsynced lyrics</li>
+      <li>Translations: Ukrainian, French (new)</li>
+    </ul>
+    <h4>5.1.652 (2014-09-02)</h4>
+    <ul>
+      <li>Fixed reading of transform scripts</li>
+      <li>Fixed saving of some sorts of WMA metadata</li>
+      <li>Improved work of new refresh list function</li>
+      <li>Translations: German (updated)</li>
+    </ul>
+    <h4>5.1.651 (2014-08-27)</h4>
+    <ul>
+      <li>Implemented support of authorized requests for Discogs</li>
+      <li>Improved: Additional processing of compilations from Amazon lookups</li>
+      <li>Improved: Now the regular expressions searching for all matches (don't stop on first match)</li>
+      <li>New hotkeys: [Ctrl+F5] for rescan current folder and [F5] for refresh on screen data</li>
+      <li>New column in the list of files with information about covers</li>
+      <li>Updated playback engine</li>
+      <li>Translations: Czech (updated), Vietnamese (new)</li>
+    </ul>
+    <h4>5.1.649 (2014-05-07)</h4>
+    <ul>
+      <li>Updated Discogs support</li>
+      <li>Improved reading of corrupted ID3v2.4 tags</li>
+      <li>Translations: Ukrainian</li>
+    </ul>
+    <h4>5.1.648 (2014-03-11)</h4>
+    <ul>
+      <li>Optimized work with online services</li>
+      <li>New: Filter for release format on Discogs</li>
+      <li>Translations: Catalan, Slovak, Spain</li>
+    </ul>
+    <h4>5.1.647 (2014-02-07)</h4>
+    <ul>
+      <li>Updated support for Discogs service </li>
+      <li>Fixed: Sometimes program didn't delete tmp-files after tag removing</li>
+      <li>Changed: Tag CUT feature now remove all possible formats of metadata inspite of tags saving options </li>
+      <li>Translations: Finnish, Portuguese (Portugal)</li>
+    </ul>
+    <h4>5.1.645 (2013-12-17)</h4>
+    <ul>
+      <li>Removed support for Beatport lookups due to incompatibility with the new licensing policy </li>
+      <li>Improved work with large FLAC files</li>
+      <li>Fixed: Tags not saved if file is played with embedded player</li>
+      <li>Translations: Latvian (new), Chinese Traditional, Ukrainian, Polish, Chinese Simplified</li>
+    </ul>
+    <h4>5.1.643 (2013-11-07)</h4>
+    <ul>
+      <li>New: Now you can download additional images from web sources </li>
+      <li>Improved: Now program shows country of release where possible for web results</li>
+      <li>Improved: Increased tag saving speed on network drives</li>
+      <li>Fixed saving of scripts containing restricted characters in their names</li>
+      <li>Fixed some files sharing issues on multi-user systems</li>
+      <li>Translations: Turkish, Japanese</li>
+    </ul>
+    <h4>5.1.641 (2013-10-13)</h4>
+    <ul>
+      <li>Rollback changes which hide files from indexing service after tags saving</li>
+    </ul>
+    <h4>5.1.640 (2013-10-09)</h4>
+    <ul>
+      <li>Updated support for Beatport service </li>
+      <li>Improved: Case change function now works with multiline fields</li>
+      <li>Improved: Date of release from web sources now can be saved in full format</li>
+      <li>Increased tag saving speed for most systems</li>
+      <li>Fixed some stability issues on Windows8</li>
+    </ul>
+    <h4>5.1.638 (2013-08-22)</h4>
+    <ul>
+      <li>Improved: Intellectual sorting by Track Number, BPM and Cover size </li>
+      <li>Improved: Autocorrection of filenames for exported covers</li>
+      <li>Reverted back Genre displaying for FreeDB services</li>
+      <li>Possible fix for sharing violation problem on Win8</li>
+      <li>Translations: Dutch, Ukrainian, Chinese Simplified</li>
+    </ul>
+    <h4>5.1.637 (2013-06-04)</h4>
+    <ul>
+      <li>Improved: Now you can resize action panels </li>
+      <li>Improved: Now you can apply one text transformation for several fields at once</li>
+      <li>Improved: Interface of freedb-like services reworked and now can show several results at once</li>
+      <li>Changed behavior of some dialogs</li>
+      <li>Fixed: Resource leak and random crashes after long work</li>
+    </ul>
+    <h4>5.1.635 (2013-04-23)</h4>
+    <ul>
+      <li>New: Support for regular expressions in Text transform </li>
+      <li>Improved: Optimization of lookups on Discogs and Beatport</li>
+      <li>Improved: Ability to get album covers from MusicBrainz's related coverartarchive.org</li>
+      <li>Fixed some stability issues on Windows8</li>
+      <li>Translations: Polish, Ukrainian, Japanese</li>
+    </ul>
+    <h4>5.1.631 (2013-03-15)</h4>
+    <ul>
+      <li>New: Support for lookups on amazon.it and amazon.es</li>
+      <li>Optimized memory consumption for undo</li>
+      <li>Updated playback engine</li>
+    </ul>
+    <h4>5.1.630 (2013-01-16)</h4>
+    <ul>
+      <li>Improved: Processing of compound fields from MusicBrainz</li>
+      <li>Improved: Support for non-rgb pictures for embedded covers</li>
+      <li>Fixed: Changing of filename in export interface didn't work</li>
+      <li>Fixed: Renaming of files directly in filelist</li>
+      <li>Translations: German</li>
+    </ul>
+    <h4>5.1.625 (2012-11-14)</h4>
+    <ul>
+      <li>New: Support for Opus Codec - stream info and metadata reading/saving (Vorbis Comments)</li>
+      <li>Improved relevance of lookups on Discogs and MusicBrainz</li>
+      <li>Improved: Reading of unsynchronized ID3v2.3 tags</li>
+      <li>Improved: Reading of codec information from MP4 movies</li>
+      <li>Improved: Reading of multi-artist fields from MusicBrainz</li>
+      <li>Internal player now support multimedia features of keyboards</li>
+      <li>Program now tested on Windows 8</li>
+    </ul>
+    <h4>5.1.622 (2012-10-17)</h4>
+    <ul>
+      <li>Improved: Autovalidation of path to folder inserted from clipboard</li>
+      <li>Improved: Tags version indication in filelist</li>
+      <li>Fixed: Processing of tag fields which contain %</li>
+      <li>Fixed: Reading of some types of comments from ID3v2 tags</li>
+      <li>Translations: Dutch</li>
+    </ul>
+    <h4>5.1.621 (2012-09-05)</h4>
+    <ul>
+      <li>New keyboard shortcut to select next file in list CTRL+N</li>
+      <li>Fixed: Sometimes rating information may disappear from Id3v2 tag after saving in Tag editor</li>
+      <li>Fixed: Tagging problems with very short OGG-vorbis files</li>
+      <li>Translations: Chinese Traditional</li>
+    </ul>
+    <h4>5.1.620 (2012-07-11)</h4>
+    <ul>
+      <li>New: Support for largest music store for DJs Beatport.com with ability to get full info about releases and
+        download high quality covers</li>
+      <li>Changed: TOTALTRACKS and TOTALDISCS values now saved in individual fields for Vorbis Comments</li>
+      <li>Fixed rare problem with reading of ID3v2 tags contained exteneded header</li>
+      <li>Updated Discogs service support</li>
+      <li>Translations: Estonian, Chinese Simplified</li>
+    </ul>
+    <h4>5.1.612 (2012-05-23)</h4>
+    <ul>
+      <li>New: Ability to shuffle list of files</li>
+      <li>Updated sorting logic for some columns of filelist</li>
+      <li>Fixed behaviour of some file dialogs on WinXP</li>
+      <li>Fixed problems with false error indication while saving ID3v1 tags</li>
+      <li>Updated playback engine</li>
+    </ul>
+    <h4>5.1.611 (2012-03-21)</h4>
+    <ul>
+      <li>More accurate calculation of bitrate for FLAC-files</li>
+      <li>Workarounds to work with files locked by other programs like Winamp, iTunes etc.</li>
+      <li>Fixed: File operations on the filtered list of files</li>
+      <li>Fixed: Positioning on multi-monitor systems</li>
+      <li>Translations: Greek</li>
+    </ul>
+    <h4>5.1.610 (2012-02-15)</h4>
+    <ul>
+      <li>Improved Discogs service support for old releases</li>
+      <li>Improved context menu for list of files</li>
+      <li>Changed: The program now preserve order of files when opening playlists</li>
+      <li>Fixed some stability issues in Tag processor</li>
+      <li>Updated list of available placeholders</li>
+      <li>Retuned vorbis comments support</li>
+      <li>Translations: Swedish</li>
+    </ul>
+    <h4>5.1.608 (2012-01-24)</h4>
+    <ul>
+      <li>Updated support for WavPack format</li>
+      <li>Unification of the options for processing of existing values in Tag processor</li>
+      <li>Fixed: Work with cover art pasted from clipboard</li>
+      <li>Fixed: Log displaying while renaming files</li>
+      <li>Fixed: Program can't read Album Artist field from ID3v2.2 tag</li>
+    </ul>
+    <h4>5.1.607 (2012-01-12)</h4>
+    <ul>
+      <li>Updated Discogs service support </li>
+      <li>Updated TrackType service support</li>
+      <li>Improved: On Music renamer tab transform scripts now can be applied not only to filenames, but to placeholders
+      </li>
+      <li>Changed: Program now saves ID3v2 tags into AAC-files by default</li>
+      <li>Fixed: Reading of ID3v2 comments with additional description</li>
+      <li>Fixed: Sometimes ID3v2 tag can't be removed on some systems</li>
+      <li>Translations: Japanese, Ukrainian, Turkish </li>
+    </ul>
+    <h4>5.1.605 (2011-12-01)</h4>
+    <ul>
+      <li>New: Volume control for built-in player </li>
+      <li>New: Placeholder %_filedate_rfc% for date and time of file in internet (rfc822) format</li>
+      <li>Improved: Quick preview of full-sized album covers in tag editor</li>
+      <li>Improved: Placeholders are reorganized</li>
+      <li>Fixed: Processing of conditional sections </li>
+      <li>Fixed: Processing of mixed-case strings with non-latin chars in transform scripts and filter</li>
+      <li>Some parts of interface have become more friendly to systems with increased DPI</li>
+      <li>Updated sound engine, fixed problems with running on remote desktop</li>
+      <li>Reverted back internal rules for transform scripts to prior 5.1.602 state</li>
+      <li>Translations: Chinese Simplified, Polish</li>
+    </ul>
+    <h4>5.1.602 (2011-11-04)</h4>
+    <ul>
+      <li>New: Transferred to new version of Amazon Product Advertising API </li>
+      <li>Fixed and reconfigured some templates and export scripts</li>
+      <li>Translations: Italian, Portuguese (Brazil), Ukrainian</li>
+    </ul>
+    <h4>5.1.601 (2011-10-27)</h4>
+    <ul>
+      <li>Improved: Speedup filtration of filelist </li>
+      <li>Improved: Ability to get release info directly from MusicBrainz for known PUID</li>
+      <li>Improved: Parsing of some Musicbrainz releases with lack of data</li>
+      <li>Improved: Slightly increased tag writing speed for some systems</li>
+      <li>Fixed: Thumbnails of album covers from Amazon displayed in reverse order</li>
+      <li>Fixed: Processing of several conditional sections in one template</li>
+      <li>Retuned autocorrection function for filenames</li>
+      <li>More friendly autosuggest feature for web requests</li>
+      <li>Translations: German, Ukrainian</li>
+    </ul>
+    <h4>5.1.600 (2011-09-15)</h4>
+    <ul>
+      <li>New: MusicBrainz albums database support with ability to download cover art from sites related to release
+      </li>
+      <li>New: Transferred to new Discogs API v2.0, old version will be shut down 15.12.2011</li>
+      <li>Improved: Correct displaying of multiline fields in tags created on Mac OS</li>
+      <li>Changed: The program now checks write permissions for temporary files to avoid problems with network folders
+      </li>
+      <li>Changed: The program now trying to download previews of disc covers before the data about all albums loaded
+      </li>
+      <li>Changed: The program now load only one folder instead top level path when you use console params</li>
+      <li>Fixed: Processing of tag data for multiple selected files with empty fields values</li>
+      <li>Fixed: Rarely authorization problems for some type of requests on Amazon</li>
+      <li>Translations: Serbian (Latin)</li>
+    </ul>
+    <h4>5.1.598 (2011-07-22)</h4>
+    <ul>
+      <li>New: placeholder %_nl% for new line symbol</li>
+      <li>Improved: Processing of bugged Discogs releases with empty list of tracks</li>
+      <li>Portable version now comes without initial config file to prevent of erasing your settings</li>
+      <li>Translations: Czech, Portuguese (Portugal)</li>
+    </ul>
+    <h4>5.1.597 (2011-04-14)</h4>
+    <ul>
+      <li>Improved: Special indication of spaces and empty values in transform scripts editor</li>
+      <li>Fixed: Rename folder by TAG feature on network drives</li>
+      <li>Fixed: Processing of %foldername% placeholder for network drives</li>
+      <li>Updated Discogs support</li>
+      <li>Program no longer tested on Windows2000</li>
+      <li>Translations: Portuguese (Brazil), German</li>
+    </ul>
+    <h4>5.1.596 (2011-02-10)</h4>
+    <ul>
+      <li>Improved: Export function now can keep current order of files with special placeholder %_index%. Default
+        scripts for html and csv updated.</li>
+      <li>Improved: Automatic validation of output filename for Export function</li>
+      <li>Changed: Mapping VERSION -&gt; REMIXEDBY for Vorbis comments </li>
+      <li>Changed: Processing of cue-files containing multiple PERFORMERs </li>
+      <li>Changed: Program now use path to first dropped file as %workpath% </li>
+      <li>Fixed: Processing of patterns with conditional sections</li>
+      <li>Pressing the tab key in edit mode inside filelist now advances to the same field of next file, just like the
+        Windows 7 Explorer does it </li>
+      <li>Compatibility fixes for some ID3v2 frames</li>
+      <li>Translations: Bulgarian, Italian</li>
+    </ul>
+    <h4>5.1.595 (2011-01-26)</h4>
+    <ul>
+      <li>Improved: Now you can add files to current list if hold down Ctrl button while drag'&amp;'drop files from
+        Windows explorer</li>
+      <li>Improved: Reading of separated fields TOTALDISCS and TOTALTRACKS used in some software</li>
+      <li>Improved: New placeholders %foldername2% for name of folder on two levels up and %foldername3% for name of
+        folder on three levels up</li>
+      <li>Improved: Recovering of ID3v2 tags with empty headers and frames</li>
+      <li>Changed: Non-portable version of TagScanner now store all settings and scripts in current user profile folder
+        %appdata%\TagScanner. All old settings from VirtualStore of Windows Vista and above will be moved to new
+        location.</li>
+      <li>Fixed: Processing of %hascover% placeholder</li>
+      <li>Fixed: Possible 'Out Of Resource' error on multi-monitor systems </li>
+      <li>Now program interface always scaled according to Windows settings</li>
+      <li>Updated sound engine</li>
+    </ul>
+    <h4>5.1.594 (2010-11-18)</h4>
+    <ul>
+      <li>Some tweaks in Discogs and Amazon import</li>
+      <li>Updated WMA support</li>
+      <li>Fixed: Access violation error with some actions</li>
+      <li>Fixed: Tag saving problems on mapped network drives</li>
+    </ul>
+    <h4>5.1.593 (2010-11-09)</h4>
+    <ul>
+      <li>Improved: Greatly increased writing speed with network and external drives</li>
+      <li>Improved: Error protection on corrupted covers from tags, also now you can delete such covers</li>
+      <li>Improved: %_counter% placeholder now use formatting settings in same way as %track%</li>
+      <li>Improved: Image quality for resized and recompressed covers</li>
+      <li>Improved: Support for Vietnamese encoding in converters</li>
+      <li>Improved: Autocorrection of foldernames with spaces at the beginning and end</li>
+      <li>Changed: Program now ignore ID3v2 tags in FLAC files with proper Vorbis tags</li>
+      <li>Changed: Mapping GROUPING -&gt; CONTENTGROUP for Vorbis comments </li>
+      <li>Fixed: Memory leaks in ID3v2 support </li>
+      <li>Fixed: Some errors in WMA support</li>
+      <li>Some fixes in ALAC support for files created with old versions of iTunes</li>
+      <li>Find and Find duplicates functions slightly retuned</li>
+      <li>Changed some groups in filelist</li>
+      <li>Program window now rearranged on startup if its borders out of screen</li>
+      <li>Translations: Czech, German, Ukrainian</li>
+    </ul>
+    <h4>5.1.592 (2010-09-24)</h4>
+    <ul>
+      <li>New tag engine</li>
+      <li>New placeholder %_counter%</li>
+      <li>Improved: Reading of CUE files for various artists compilation</li>
+      <li>Improved: Repairing of some sort of corrupted ID3v2 tags</li>
+      <li>Improved: Compatibility with iTunes10</li>
+      <li>Improved: Program now remember settings for 'Restructure files' feature</li>
+      <li>Changed: Disabled joint reading of ID3v1 and ID3v2 tags</li>
+      <li>Changed: Mapping DESCRIPTION -&gt; COMMENT for Vorbis comments </li>
+      <li>Changed: Mapping ORGANIZATION -&gt; PUBLISHER for Vorbis comments </li>
+      <li>Fixed: Generating of tag data with empty user blocks in Filename-to-Tag generator</li>
+      <li>Fixed: Problems with slash symbol in Music renamer for some Windows7 systems</li>
+      <li>Updated Discogs support</li>
+      <li>On Windows Vista and above program now trying to use new system fonts</li>
+      <li>All translation files now utf-8 encoded </li>
+      <li>Transferred to new compiler </li>
+      <li>Translations: Polish, Czech, Chinese Traditional, Slovak, Korean</li>
+    </ul>
+    <h4>5.1.571 (2010-07-02)</h4>
+    <ul>
+      <li>New: Now you can automatically change dimension and compression level of embedded cover art </li>
+      <li>New: Autonumbering function now has an option to reset counter on next group of flles</li>
+      <li>Improved: Transform scripts now applied for live preview in renamer</li>
+      <li>Improved: Processing of multiple user-defined &lt;text blocks&gt; in Filename-to-Tag generator</li>
+      <li>Changed: Transform scripts now applied only for engaged part of filename instead of full path for
+        Filename-to-Tag generator</li>
+      <li>Changed: Program now change case of file extension only to all upper or all lower</li>
+      <li>Fixed: Tag processor ignore numeric values for some placeholders </li>
+      <li>Fixed: Program no longer prevent of actions on auto-hided taskbar</li>
+      <li>Rewritten network code to avoid problems with unstable connections (no need to restart program)</li>
+      <li>Changed interface scaling method </li>
+      <li>Translations: Portuguese (Brazil), Dutch, Italian, Turkish, Japanese, German</li>
+    </ul>
+    <h4>5.1.563 (2010-05-12)</h4>
+    <ul>
+      <li>Updated rules for words capitalization </li>
+      <li>Retuned autocorrection function for filenames</li>
+      <li>Retuned Import data from CUE function</li>
+      <li>A smoother migration from version 5.0 to 5.1</li>
+      <li>Translations: Portuguese - European, Croatian (alternative)</li>
+    </ul>
+    <h4>5.1.562 (2010-04-29)</h4>
+    <ul>
+      <li>New: Ability to search info in Amazon Mp3Downloads section</li>
+      <li>Improved: Program now can automatically save downloaded covers into album folder</li>
+      <li>Improved: Program now remember last working module</li>
+      <li>Improved: Program now can indicate about problems with access to the file</li>
+      <li>Improved: Import of additional info about track featured artists from Discogs</li>
+      <li>Improved: Now you can use full range of metadata placeholders for List maker and Tag Processor</li>
+      <li>Improved: Interface for web services reorganized</li>
+      <li>Improved: Autocorrection of foldernames with dots at the beginning and end</li>
+      <li>Fixed: Last line from text file sometimes ignored when you try to generate tag data from</li>
+      <li>Fixed: Incorrect work of trim filename function</li>
+      <li>Fixed: Preserve file modification time when removing tags if option enabled</li>
+      <li>Fixed: Reading of Genre field containing brackets</li>
+      <li>Translations: Belarusian, Hebrew (new), Croatian (new), Japanese</li>
+    </ul>
+    <h4>5.1.559 (2010-03-16)</h4>
+    <ul>
+      <li>Improved: Program now use Windows interface scaling option</li>
+      <li>Improved: Trim filename function now also affect on created folders</li>
+      <li>Improved: Reading and mapping of Album Artist field for better compatibility with other software</li>
+      <li>Improved: New placeholder %foldername% for name of folder which contain current file</li>
+      <li>Improved: Processing of multi-artist releases from Discogs</li>
+      <li>Changed: Program help now opened in default browser</li>
+      <li>Changed: Remapped key shortcuts to fix problems with typing of some national symbols</li>
+      <li>Changed: iTunes service comments in ID3v2 tags now always saved in ISO-8859-1 encoding</li>
+      <li>Fixed: Error on removing files from list</li>
+      <li>Fixed: Saving of playlists in PLS format</li>
+      <li>Fixed: Reading data from CUE-files</li>
+      <li>Fixed: Next file in list was read twice after saving</li>
+      <li>Improved interface usability for some modules</li>
+      <li>Translations: French (2 versions), Danish (new), Slovak, German, Dutch</li>
+    </ul>
+    <h4>5.1.555 (2009-12-17)</h4>
+    <ul>
+      <li>New: Ability to edit tag fields directly in list of files</li>
+      <li>Improved: Tag Processor now highlights changed fields</li>
+      <li>Improved: Now you can use Transform scripts to replace field value with static text</li>
+      <li>Improved: Fast processing of very large or corrupt text fields inside ID3v2 tags</li>
+      <li>Improved: Export scripts is now updated in real time, if changed outside</li>
+      <li>Improved: Folding sections in tag editor</li>
+      <li>Changed: 'Rename folder by tag' now can work with all selected files instead of focused</li>
+      <li>Changed: Now the program in AUTO mode saves only APEv2 tag in ape,wv,mpc-files if they don't contain ID3v1 tag
+      </li>
+      <li>Fixed: Handling restrictions on 99 tracks in album for freedb and tracktype services</li>
+      <li>Fixed: Problems with selection of last file in list on Win7</li>
+      <li>New keyboard shortcuts: Ctrl+P - options, Ctrl+Shift++/Ctrl+Shift+- - expand/collapse groups, Ctrl+Shift+O -
+        open playlist, Esc - cancel any long-running operation</li>
+      <li>Compatibility fixes for some ID3v2 frames</li>
+      <li>Translations: Hungarian</li>
+    </ul>
+    <h4>5.1.553 (2009-10-08)</h4>
+    <ul>
+      <li>Improved: Increased speed of muliselection processing in the list of files</li>
+      <li>Improved: Changed logic of the Html filter for export operations</li>
+      <li>Improved: Reading of unsynchronized ID3v2 tags</li>
+      <li>Fixed: Reading of ID3v2.4 tags with utf-8 encoded description inside APIC frames</li>
+      <li>Fixed: Change case in multiline fields</li>
+      <li>Fixed: Publisher was mapped to Album Artist in Filename/Text file to Tag modules</li>
+      <li>Fixed: Incorrect calculation of MP4 tag size that prevent saving changes</li>
+      <li>Updated export scripts</li>
+      <li>Translations: German, Portuguese (Brazil)</li>
+    </ul>
+    <h4>5.1.551 (2009-08-27)</h4>
+    <ul>
+      <li>Improved: Now you can remove files from main list of files</li>
+      <li>Fixed: 'List index out of bounds' error when using scripts with the clearing of fields values</li>
+      <li>Fixed: Working of Autonumbering function outside Tag editor tab</li>
+      <li>Fixed: Last selected file inserted twice into playlist</li>
+      <li>Program once again show data offset for mp3 files</li>
+      <li>Translations: Greek</li>
+    </ul>
+    <h4>5.1.550 (2009-08-04)</h4>
+    <ul>
+      <li>Removed: Tag processor module: Copy tag</li>
+      <li>Removed: Standalone playlists editor (now integrated into main list of files)</li>
+      <li>New: Tag Processor module: Tag fields mixer - format, extract and move any tag fields data to other fields
+      </li>
+      <li>New: Tag Processor module: Import tag data from text files </li>
+      <li>New: Special field SOURCESTRING in text transform script editor for source strings in new processor modules
+      </li>
+      <li>New: Filtering in list of files</li>
+      <li>New: Change codepage function (from selected codepage to unicode) in text transform scripts</li>
+      <li>New: Ability to create playlist from selected files</li>
+      <li>New: Natural sorting algorithm for list of files (on by default for WinXP and later)</li>
+      <li>New: 'Export list' module with scripting support, included scripts for xml, csv and html</li>
+      <li>New: Reader for Mpeg based files with detection of encoder type and accurate calculation of length and bitrate
+      </li>
+      <li>New: Find duplicates function for list of files (by Title, Size and Length)</li>
+      <li>New: Conditional sections [...] in output strings</li>
+      <li>New: Support of new official OGG Vorbis field designed for embedded cover art (METADATA_BLOCK_PICTURE)</li>
+      <li>New: Functions to import/export covers for multiple files at once</li>
+      <li>Improved: Now you can copy/paste TAG information between different media formats(Vorbis to ID3, APE to MP4
+        etc.)</li>
+      <li>Improved: In Filename-to-TAG generator you can now append text to extracted parts directly in formatting
+        string</li>
+      <li>Improved: User defined templates for quick renaming of folders from menu</li>
+      <li>Improved: User defined genres for Tag Editor</li>
+      <li>Improved: 'Open file location' operation now highlight selected file in explorer</li>
+      <li>Improved: In list of files now you can see columns for all available for editing fields</li>
+      <li>Improved: Import additional information from a Amazon and Discogs (Composer, Conductor, Remixed by etc.)</li>
+      <li>Improved: Additional fields: CONDUCTOR, ISRC, REMIXEDBY, SUBTITLE, LYRICIST</li>
+      <li>Improved: Option for Discogs - Move &quot;The&quot; at the beginning in artist names</li>
+      <li>Improved: Ability to Copy/Paste covers from clipboard</li>
+      <li>Improved: Ability to sort list of files on presence of embedded pictures</li>
+      <li>Improved: Ability to create copy of whole text transform script</li>
+      <li>Improved: Transition to the new Amazon access protocol</li>
+      <li>Improved: Keeping aspect ratio of covers when displaying in the tag editor</li>
+      <li>Improved: Updated support for MusePack and WavePack formats</li>
+      <li>Improved: Multi-monitor support</li>
+      <li>Improved: Check for updates on program startup</li>
+      <li>Changed: 'Undo' operation now restore original encoding of tag</li>
+      <li>Changed: 'Export list' function now work for selected files</li>
+      <li>Changed: In Tag Editor, all fields on the screen except locked are cleaned up when you click Remove tag button
+      </li>
+      <li>Changed: To improve compatibility with other software the program now use first occurrence of frame instead
+        the last one for ID3v2 tag </li>
+      <li>Changed: Program now updates tag information instead complete overwrite when you get data from web</li>
+      <li>Fixed: Reading of ID3v2 tags with GEOB frames</li>
+      <li>Fixed: Saving of ID3v2 tags APIC descriptions</li>
+      <li>Fixed: Reading of ID3v2 tags with utf-16 BigEndian encoded frames</li>
+      <li>Fixed: Saving of cover art from web into OGG</li>
+      <li>Fixed: Unicode paths usage in some dialogs</li>
+      <li>Fixed: Reading of text files with BOM</li>
+      <li>Fixed: Incorrect processing of files dragged from explorer</li>
+      <li>Fixed: Reading of some MP4 with very long custom tag fields</li>
+      <li>Fixed: Memory leaks in interface render</li>
+      <li>New internal tag storage and processing engine</li>
+      <li>Most of program dialogs was rearranged</li>
+      <li>Updated help files, added examples of usage for all modules</li>
+      <li>Updated playback engine</li>
+      <li>Translations: Chinese Traditional, Japanese, Polish, Spanish</li>
+    </ul>
+    <div style="text-align:right"><a href="#top">top</a></div>
+    <p class="footer">Copyright 1999-2024 <a href="http://www.xdlab.ru/en/">Sergey Serkov</a></p>
+  </div>
+</body>
+
+</html>

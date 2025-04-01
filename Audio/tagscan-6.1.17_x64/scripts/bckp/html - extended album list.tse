@@ -1,0 +1,88 @@
+﻿# Tagscanner export script
+
+$file_name AlbumList.htm
+$file_notes Album list sorted by album artist with covers and stats
+$file_encoding utf-8
+$file_writebom 1
+$file_ishtml 1
+$file_relativepaths 1
+
+$document_open
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta name="generator" content="TagScanner 5.1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>TagScanner Extended Album List</title>
+<script type="text/javascript">
+function showhide(id) {
+var objList = document.getElementsByTagName("TR");
+var k = objList.length;
+    for (var i = 0; i < k; i++)
+        if(objList'['i']'.id == "el_" + id){
+	if(objList'['i']'.style.display == 'none') {
+		objList'['i']'.style.display = '';
+	}else{
+		objList'['i']'.style.display = 'none';
+	}
+}
+}
+</script>
+
+<style type="text/css"><!--
+body { font-family: Tahoma; font-size: 10pt; padding: 0px; margin: 0px; height: 100%; width: 100%; }
+table.list {border: 1px dashed #dfe3eb; border-top: none; margin-top: 5px;  border-bottom: 1px solid #dfe3eb;}
+table.list td {font-size: 8pt; padding:3px; vertical-align:middle; border-bottom: 1px solid #dfe3eb;}
+table.list td  a {font-size: 8pt; color: #4169E1;}
+table.list tr.even td {background-color: #F8F8F8; color: black;cursor:pointer; cursor: hand;} 
+table.list tr.odd td {background-color:#F3F3F3; color: black;cursor:pointer; cursor: hand;}
+table.list tr.sel td {background-color:#FFFFFF; color: black;border-bottom: 4px solid #dfe3eb; margin-top: 5px; margin-bottom:5px;}
+table.list tr.even td.idx, table.list tr.odd td.idx,table.list tr.sel0 td.idx {font-size: 9pt; text-align: center; background-color: #CFF; font-weight: bold}
+table.list tr.hd td {background-color: #778899; cursor:default;  font-weight: bold;  color: #F0F8FF;  border-top: 2px solid #FFA07A;  padding: 6px 6px 6px 6px;}
+table.list tr.hd td.sorted {background-color: #F5F5F5; background-image:none; cursor: pointer; cursor: hand;}
+table.list td table td {border:0px; padding:0px;}
+table.list div {box-sizing:border-box; -moz-box-sizing:border-box; background-repeat:no-repeat;}
+table.list tr.hd div.action {width:100%; height:24px; background-repeat:no-repeat; background-position:center 3px;}
+.cover {box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 36%); width:200px; height:200px}
+-->
+</style>
+</head>
+<body>
+  <table class="list" border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+    <tr class="hd"><td width="20">&nbsp; </td>
+	<td>Artist</td>
+    <td>Album</td>
+	<td width="80" style="text-align: center;">Year</td>
+	<td width="130" style="text-align: center;">Genre </td>
+    </tr>
+$select %albumartist%,0
+    <tr title="Click to expand/collaps" onClick="showhide('%albumartist%')" class="%_even_odd%">
+    <td class="idx" width="20">%_counter%</td>
+    <td><b>%albumartist%</b></td>
+
+    <td>%_totalfiles% files(s)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+
+$select %year%-%album%,0
+    <tr class="sel" id="el_%albumartist%">
+    <td style="text-align: center;" width="20">%_counter%</td>
+    <td style="text-align: center;"><u><b>%album%</b></u> <br/><br/><img class="cover" src="%filepath%cover.jpg" onerror="this.onerror=null; this.src='%filepath%folder.jpg'"><br/><br/>%_codec% [/ %_codec_profile%]<br/>%_totallength% | %_totalsize% | %_totalfiles% file(s)</td>
+    <td>
+$select %fullfilenameext%,0
+	<div style="float: left;text-align:left"><span style="width:30px;">%track% </span><a href="%fullfilenameext%">%artist% - %title%</a></div><div style="float: right;text-align:right">%_length% | %_bitrate% kbps | %_filesize%</div><br/>
+$endselect
+    </td>
+    <td style="text-align: center;">%year%</td>
+    <td style="text-align: center;">%genre%</td>
+    </tr>
+$endselect
+$endselect
+    </tbody>
+</table>
+<br/>
+&nbsp;List generated with <a href="http://www.xdlab.ru">%_version%</a>
+<br/><br/></body></html>
+$document_close
